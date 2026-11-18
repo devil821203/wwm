@@ -135,3 +135,8 @@ packages/game-data/src/{equipment-rules,player-entities,rotation-schemas}.ts 已
 原有 pnpm-store-s13 的資料損壞，且搬移後套件連結失效；依 pnpm-lock.yaml 使用 .tools/pnpm-store-recovery 全新快取重建套件連結（--frozen-lockfile --ignore-scripts）。原本離線安裝失敗，原快取線上補缺仍遇損壞 JSON。
 
 pnpm --filter @wwm/game-data typecheck：通過；pnpm --filter @wwm/game-data test：10 個測試檔、172 項通過。pnpm typecheck：失敗，combat-engine/src/engine.test.ts 為二進位／無效字元。其餘損壞測試為 apps/web/src/rotation/rotation-storage.test.ts、apps/web/src/rotation/RotationWorkspace.test.tsx、tests/e2e/measurement.spec.ts；保留原狀，尚未驗收全專案。ISSUE-018 維持 OPEN；S14 狀態不變。
+## 2026-11-19：S09／S10 損壞測試重建驗證
+
+已重寫四個損壞測試：S09 measurement.spec.ts；S10 engine.test.ts、rotation-storage.test.ts、RotationWorkspace.test.tsx。戰鬥測試保留損壞檔開頭可讀部分，並補寫時間窗、版本／未知值、武器切換、Buff／DOT、快照／動態及優先序等合成案例。原始七個損壞檔仍保存在 management/recovery/2026-11-19-originals；無完整備份，不能聲稱重寫測試逐字還原或已恢復原有全部 26 項 S10 戰鬥測試覆蓋，ISSUE-018 保持 OPEN，需逐項稽核其餘原驗收邊界。
+
+環境：Windows、G: 專案、Node.js 22.14.0、pnpm 10.6.5、Chromium 桌面／手機。實際結果：`pnpm format:check` 通過；`pnpm lint` 通過；`pnpm typecheck` 通過；`pnpm test` 332 項通過（資料 172、數值 48、戰鬥 29、最佳化 9、Web 74）；`pnpm build` 通過；`pnpm test:e2e` 42 項通過。日誌在 management/tests/logs/recovery-2026-11-19/。最初格式檢查因原始快照及辨識紀錄、Lint 因備份損壞檔與未用參數失敗；修正檢查範圍與測試後重跑通過。首次 DOT 測試事件名稱與型別檢查失敗，修正後通過。重寫測試不等於正式遊戲資料驗證，S14 維持 BLOCKED，S15–S17 狀態不變。

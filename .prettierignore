@@ -14,3 +14,9 @@ CODEX_START_PROMPT.md
 WWM_Codex_Managed_Project_V1.1/
 
 apps/web/public/ocr-assets/
+
+# Preserve source snapshots and user-provided recognition notes.
+data/raw/
+data/staging/where-datas-mine/b021a2cac8c1a723e0c2b5c06b8ca29197415010/martial-art-candidates.json
+equiement-recognition.md
+equiement-tree.md
