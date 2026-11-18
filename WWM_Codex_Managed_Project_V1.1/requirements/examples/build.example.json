@@ -1,0 +1,11 @@
+{
+  "id": "demo",
+  "region": "GLOBAL",
+  "pathId": "bellstrike_splendor",
+  "level": null,
+  "levelStatus": "UNKNOWN",
+  "ownedEquipment": [],
+  "virtualEquipment": [],
+  "rotation": [],
+  "note": "僅資料結構示例，沒有遊戲實際傷害數值"
+}

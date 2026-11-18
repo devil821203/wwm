@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official",
+      "url": "https://www.wherewindsmeetgame.com/news/",
+      "purpose": "國際服公告與版本異動",
+      "access": "manual_review",
+      "license_status": "unverified"
+    },
+    {
+      "id": "thgl",
+      "url": "https://wherewindsmeet.th.gl/",
+      "purpose": "裝備詞條、武學與計算參考",
+      "access": "permission_required_for_bulk_import",
+      "license_status": "unverified"
+    },
+    {
+      "id": "where-datas-mine",
+      "url": "https://github.com/greydust/where-datas-mine",
+      "purpose": "裝備數值、承音、調律與結構化資料",
+      "access": "review_repository_license_and_files",
+      "license_status": "unverified"
+    },
+    {
+      "id": "wwm-dps",
+      "url": "https://github.com/youaresodalgona/wwm-dps",
+      "purpose": "戰鬥模擬及公式交叉驗證",
+      "access": "review_repository_license_and_files",
+      "license_status": "unverified"
+    }
+  ]
+}

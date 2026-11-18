@@ -1,0 +1,31 @@
+{
+  "name": "@wwm/optimizer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "typecheck": "pnpm --filter @wwm/combat-engine... build && tsc --noEmit",
+    "test": "pnpm --filter @wwm/combat-engine... build && vitest run",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@wwm/game-data": "workspace:*",
+    "@wwm/stat-engine": "workspace:*",
+    "@wwm/combat-engine": "workspace:*",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

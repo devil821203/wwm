@@ -1,0 +1,479 @@
+{
+    "package":  "WWM_Codex_Managed_Project_V1.1",
+    "integratedDate":  "2026-11-17",
+    "scope":  "Specifications only; preserve S01/S02 implementation and history",
+    "files":  [
+                  {
+                      "path":  "AGENTS.md",
+                      "incomingSha256":  "89d3703f66fab8027d0150da99ecc161427141e2768e51c867a316d7964904de",
+                      "previousSha256":  "f928dbcadb235463971190cbd31797953d390eb9e172cbb9f94de6aaf80a112e",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "CODEX_START_PROMPT.md",
+                      "incomingSha256":  "4896767ab23c23dc5cf99b95a8318245346995a61e557a1593f7d72d18ebdf5c",
+                      "previousSha256":  "2539f820ac538a5ac9e5f9d917f58629c504503aee69013bcd0ed8561efba315",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "README.md",
+                      "incomingSha256":  "cfae17079787ada9c421403e04ff814cb51cc03f6d64c948044fab1f603ea92f",
+                      "previousSha256":  "43738593a7cc17448f7ef1d55f98d6ec7e77a8a4b390bb7f8704f0f2c9a69383",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "apps/.gitkeep",
+                      "incomingSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "previousSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/data-sources/SOURCE-REVIEW.md",
+                      "incomingSha256":  "7ee5421888f6c0c2c4ab677167d6f2c272ce0207a3c188b950e7b528e6198310",
+                      "previousSha256":  null,
+                      "comparison":  "NEW"
+                  },
+                  {
+                      "path":  "management/data-sources/sources.json",
+                      "incomingSha256":  "60412850d612fa07952b7862309c09ad0355ec446e9a750d0a234eabd6ea251f",
+                      "previousSha256":  null,
+                      "comparison":  "NEW"
+                  },
+                  {
+                      "path":  "management/data-sources/UPDATE-LOG.md",
+                      "incomingSha256":  "94b9af781396735d54f047ff2c13a9c4db94f1a8daa64a4597c347b727b3d88c",
+                      "previousSha256":  null,
+                      "comparison":  "NEW"
+                  },
+                  {
+                      "path":  "management/data-sources/UPDATE-POLICY.md",
+                      "incomingSha256":  "da676958e67dc7486596d62c34a4aeac9ee7b57d782da9d8c81a879db6fba7f9",
+                      "previousSha256":  null,
+                      "comparison":  "NEW"
+                  },
+                  {
+                      "path":  "management/data-sources/UPDATE-TESTS.md",
+                      "incomingSha256":  "d6f9cc10acdcf75f0f7b098c45daa1b3ad1af67faa02eab6147111e98bd8b96f",
+                      "previousSha256":  null,
+                      "comparison":  "NEW"
+                  },
+                  {
+                      "path":  "management/decisions/ADR-INDEX.md",
+                      "incomingSha256":  "8158dd04c60ec543ee779f4eca7e14df6a90856e2765a7ed16c1340139c037cb",
+                      "previousSha256":  "53190d61930bdbae915b58972fcc4be1d3bafc3e3edd84bbeb8d241145df3a59",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/issues/BLOCKERS.md",
+                      "incomingSha256":  "3acf8cb2aa981bf82ee7106e8516d2797f21ac927ed53f0727e2aa373ab3037b",
+                      "previousSha256":  "d9b511bfc40a35c43a4add53f6df60cbf4b9d0d04c5468b707bc25b6cce58dc3",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/overview/DEPENDENCIES.md",
+                      "incomingSha256":  "d42c565ee14941e80c25123e4f4e027b9c469bb306efb84ebefcf81c65aaf387",
+                      "previousSha256":  "d42c565ee14941e80c25123e4f4e027b9c469bb306efb84ebefcf81c65aaf387",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/overview/DEVELOPMENT-OVERVIEW.md",
+                      "incomingSha256":  "99bf39d5794f50ba3f986cc82d8f0fcaeeed256c0735077069aaf017ef856deb",
+                      "previousSha256":  "773c0c32f8f97e7b7b2bdfd8ab27b9ceb60e5f5e7c5098988c0ca00a9fad422b",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/plans/STEP-PLAN.md",
+                      "incomingSha256":  "c0485be2f9b8308141b5c9049a675e92f385a0d1cc983e6e2965f7f14eb96e54",
+                      "previousSha256":  "456317ef607787ca380dc86bdb018e6eaf70c632aa952609da26fddce0ca07e6",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/progress/CHANGELOG.md",
+                      "incomingSha256":  "7cba5380004a9b43cb15c0c7049e74829e928341a0633785438587bb271eb95f",
+                      "previousSha256":  "1c06c2d8332fc791736523f8727b3d049ca90e8b18a35de834a42e871765a0b1",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/progress/STATUS.md",
+                      "incomingSha256":  "0faa18ade78484dc74da2d85ea24c0e5b99fe618da9f9fd9a0282235ec9cc3b0",
+                      "previousSha256":  "e0ad05d1903d6383df074c8c7fcbaf317d3cf39b66e2e0a1be3e077cfa21f4ba",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "management/templates/ISSUE-TEMPLATE.md",
+                      "incomingSha256":  "8e64a9f900f6ac94ffcad130f74c33a38299ac88baf5145f7a38068f1424c5a2",
+                      "previousSha256":  "8e64a9f900f6ac94ffcad130f74c33a38299ac88baf5145f7a38068f1424c5a2",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/templates/STEP-REPORT-TEMPLATE.md",
+                      "incomingSha256":  "02f39a0a0d8a8f6eaae70aa1c1496115164a54c6828c4bcf13c41c439727cab2",
+                      "previousSha256":  "02f39a0a0d8a8f6eaae70aa1c1496115164a54c6828c4bcf13c41c439727cab2",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/templates/TEST-RUN-TEMPLATE.md",
+                      "incomingSha256":  "90d0f6744d761c68bb38b5b7ed1d1e9dc8b5e4511d39f4f63e2e60130a952188",
+                      "previousSha256":  "90d0f6744d761c68bb38b5b7ed1d1e9dc8b5e4511d39f4f63e2e60130a952188",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/tests/TEST-PLAN.md",
+                      "incomingSha256":  "d124ca695e00ba2af36740a5b6d6e0ea6a7acee3fdb832783436e439b7888b98",
+                      "previousSha256":  "d124ca695e00ba2af36740a5b6d6e0ea6a7acee3fdb832783436e439b7888b98",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "management/tests/TEST-RUNS.md",
+                      "incomingSha256":  "b39c76bf926bfa5286936b270b9e9dbe05e090d0e1e91f19f11c6c319819cdf4",
+                      "previousSha256":  "01065cd6795aaea490fcf10b57d7cdeb057335080e87ee11a24d36145627566d",
+                      "comparison":  "DIFFERENT"
+                  },
+                  {
+                      "path":  "packages/.gitkeep",
+                      "incomingSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "previousSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/README.md",
+                      "incomingSha256":  "d77e24f71c443d659bea4e64ad43827a94aceb35bf2cfdc2e51b147b80bc9898",
+                      "previousSha256":  "d77e24f71c443d659bea4e64ad43827a94aceb35bf2cfdc2e51b147b80bc9898",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/01-PRD.md",
+                      "incomingSha256":  "abca44a3fb80f3935fab883c64fc64fe8f3c3680b58b365c4429def144d44419",
+                      "previousSha256":  "abca44a3fb80f3935fab883c64fc64fe8f3c3680b58b365c4429def144d44419",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/02-ARCHITECTURE.md",
+                      "incomingSha256":  "9ca479eeb604fe1b998892467f22eaeaca02cb962f381c2c1b02a23d029052ec",
+                      "previousSha256":  "9ca479eeb604fe1b998892467f22eaeaca02cb962f381c2c1b02a23d029052ec",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/03-DATA.md",
+                      "incomingSha256":  "855d29cb58e763bd97682ce25fc294e7247abb0310a93d04a36cdce20f9cbfa2",
+                      "previousSha256":  "855d29cb58e763bd97682ce25fc294e7247abb0310a93d04a36cdce20f9cbfa2",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/04-MODEL.md",
+                      "incomingSha256":  "ad9b69be265b9990515696d3956dab7abf125bf7eafcd5348ff6e24d6be17ef7",
+                      "previousSha256":  "ad9b69be265b9990515696d3956dab7abf125bf7eafcd5348ff6e24d6be17ef7",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/05-ACCEPTANCE.md",
+                      "incomingSha256":  "cd7438e151ecd05dd4bb052b4d1e9c2d2c17d37a50ead1fc773bcf86985b902a",
+                      "previousSha256":  "cd7438e151ecd05dd4bb052b4d1e9c2d2c17d37a50ead1fc773bcf86985b902a",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/06-CODEX-TASKS.md",
+                      "incomingSha256":  "7031f424e5f6e8adb04e37732ca29a3158c3a7b3f7ff697acfcca97861e66522",
+                      "previousSha256":  "7031f424e5f6e8adb04e37732ca29a3158c3a7b3f7ff697acfcca97861e66522",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/07-EQUIPMENT-INPUT.md",
+                      "incomingSha256":  "77b7435b2eef40fb1fe998472eccb0d680ec2d4624f30e65f56bbd3b574dd9d6",
+                      "previousSha256":  "77b7435b2eef40fb1fe998472eccb0d680ec2d4624f30e65f56bbd3b574dd9d6",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/08-EQUIPMENT-RULES-V1.2.md",
+                      "incomingSha256":  "d138151ca37a4befc6543b47000916b8531b0fb8f7903173421e2eaa08f637ea",
+                      "previousSha256":  "d138151ca37a4befc6543b47000916b8531b0fb8f7903173421e2eaa08f637ea",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/docs/09-VALUE-PROVENANCE-V1.3.md",
+                      "incomingSha256":  "d03a09d8448ab630215bb5bccd89cd652743af5b56ca4dc18593b7ec0f9ae782",
+                      "previousSha256":  "d03a09d8448ab630215bb5bccd89cd652743af5b56ca4dc18593b7ec0f9ae782",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/examples/build.example.json",
+                      "incomingSha256":  "ee24215adcdec82705d0f755a1cbd40439ef34bcdf3329b293ff1e7d40dfc7a4",
+                      "previousSha256":  "ee24215adcdec82705d0f755a1cbd40439ef34bcdf3329b293ff1e7d40dfc7a4",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/schemas/game-data.schema.json",
+                      "incomingSha256":  "d68c19f8ff39144426b90bbd73ba0023b13ba2df09d03975f002a26d67fc1789",
+                      "previousSha256":  "d68c19f8ff39144426b90bbd73ba0023b13ba2df09d03975f002a26d67fc1789",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/schemas/paths.json",
+                      "incomingSha256":  "e56b51feee44f280bffac84b1e230fbf204a0a8ed7df87be4ebcf3b28c8c8966",
+                      "previousSha256":  "e56b51feee44f280bffac84b1e230fbf204a0a8ed7df87be4ebcf3b28c8c8966",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/tests/equipment-v1.2.md",
+                      "incomingSha256":  "4bab97692e6e0352f676a861561f6c1dc54187823540540c580324a2412731bb",
+                      "previousSha256":  "4bab97692e6e0352f676a861561f6c1dc54187823540540c580324a2412731bb",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/tests/fixtures.md",
+                      "incomingSha256":  "03f62acd82cd3d51009c1fe9e779863bbe60ffb6e8c7a00469d1ad5de016ab08",
+                      "previousSha256":  "03f62acd82cd3d51009c1fe9e779863bbe60ffb6e8c7a00469d1ad5de016ab08",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "requirements/tests/value-provenance-v1.3.md",
+                      "incomingSha256":  "9e86efc372d5547f532a56cddced62d39cab4f5c4d6b1d8e6b8ec8036b55e1bf",
+                      "previousSha256":  "9e86efc372d5547f532a56cddced62d39cab4f5c4d6b1d8e6b8ec8036b55e1bf",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "src/.gitkeep",
+                      "incomingSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "previousSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "comparison":  "IDENTICAL"
+                  },
+                  {
+                      "path":  "tools/.gitkeep",
+                      "incomingSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "previousSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                      "comparison":  "IDENTICAL"
+                  }
+              ],
+    "protectedFiles":  [
+                           {
+                               "path":  "apps/.gitkeep",
+                               "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                           },
+                           {
+                               "path":  "apps/web/index.html",
+                               "sha256":  "1fa3c91cbfc749b93e459fb38c2be222bf04b3c68e323af958f87da94c9c591e"
+                           },
+                           {
+                               "path":  "apps/web/package.json",
+                               "sha256":  "159a07b7b43eea6cd325450f1f5f42020f822463d924d89afc3a65de4aa60aa8"
+                           },
+                           {
+                               "path":  "apps/web/tsconfig.json",
+                               "sha256":  "33feba05d02cd75e5ce9dfa4964a0cabeab671438366022d553ca2a1ebf10f78"
+                           },
+                           {
+                               "path":  "apps/web/vite.config.ts",
+                               "sha256":  "e00bc5927be93ac5e5d3daa131ae51b4dad309ef4053047d507020f56f074387"
+                           },
+                           {
+                               "path":  "apps/web/src/App.test.tsx",
+                               "sha256":  "ed774f57d0bbe0f3c5caa2c24d86b5d2689458554b2dd55b1842a7c3412b04f8"
+                           },
+                           {
+                               "path":  "apps/web/src/App.tsx",
+                               "sha256":  "180fcaf10e12a1a8766a16a352becc77ba956a127272c4400a27ef285a998396"
+                           },
+                           {
+                               "path":  "apps/web/src/main.tsx",
+                               "sha256":  "240903a71d5933c9b6910e054295ec4551c18803cd024ad6ef6d52134d96202a"
+                           },
+                           {
+                               "path":  "apps/web/src/styles.css",
+                               "sha256":  "d2c0a880c1332490eb7695fee833c6fa5b2ba4cc014528e1ae10844573c5f601"
+                           },
+                           {
+                               "path":  "apps/web/src/test/setup.ts",
+                               "sha256":  "268e7200d092daa3225eb06790ed72842e5d3234a53980c90ff463d7b81528d3"
+                           },
+                           {
+                               "path":  "packages/.gitkeep",
+                               "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                           },
+                           {
+                               "path":  "packages/game-data/package.json",
+                               "sha256":  "b8926981163761b9634555f7287b098f52bdcba7511b899c4b7db01ff156ac61"
+                           },
+                           {
+                               "path":  "packages/game-data/README.md",
+                               "sha256":  "beca24fce5a17d73ab6acbca61456ee459102e3cf664fcc9c9eb1a99b8ec10aa"
+                           },
+                           {
+                               "path":  "packages/game-data/tsconfig.build.json",
+                               "sha256":  "5eeda41cbcf810837fc02995c92762a34a7d757402a8f386fbebef175ff996fc"
+                           },
+                           {
+                               "path":  "packages/game-data/tsconfig.json",
+                               "sha256":  "5da8234cbf19be36c9f91dabd4a6674f217de1c20cea38b5e60848259f01eedb"
+                           },
+                           {
+                               "path":  "packages/game-data/src/index.ts",
+                               "sha256":  "dc7aeb44ba997f12b97c6f037438666b2fac4677dad79ea972aa64cbcf1c618a"
+                           },
+                           {
+                               "path":  "packages/game-data/src/path-catalog.ts",
+                               "sha256":  "7c9dbb8ab2e82c777b304c711b98000f31d619a1a2771e7a46eceae1d239bace"
+                           },
+                           {
+                               "path":  "packages/game-data/src/schemas.test.ts",
+                               "sha256":  "6b1a97ba83a05a892334cd4c82756434e82f6f685bbce177d9615565afd14c27"
+                           },
+                           {
+                               "path":  "packages/game-data/src/schemas.ts",
+                               "sha256":  "b2c18d843ad87c2eae4e3a323e8c9d75bdf919426e9c70404bf79fd67113de61"
+                           },
+                           {
+                               "path":  "packages/game-data/src/data/path-candidates.json",
+                               "sha256":  "d0e0663fcef7c59b928a40152b2e3e2e0f6ff1423a4e6f2769f143d07a852bfe"
+                           },
+                           {
+                               "path":  "packages/game-data/src/test/fixtures.ts",
+                               "sha256":  "fb8f8aa3fc1283cb019a0604dd600a3f85b6f1b7cc20b552d2298c0a9efbe045"
+                           },
+                           {
+                               "path":  "package.json",
+                               "sha256":  "4f9cbb2920acb0218c051f484e6cbebc442b327fa29d5b900cae73b6a586f7df"
+                           },
+                           {
+                               "path":  "pnpm-lock.yaml",
+                               "sha256":  "d0ee76e62b94fc86448d59dfe07dbae9c7d53ad6bc91b9a22cee9d28f464670a"
+                           },
+                           {
+                               "path":  "pnpm-workspace.yaml",
+                               "sha256":  "e817d3f04af264843545f902cadbe52ad664713d1667679cf87bd6423c1c9aed"
+                           },
+                           {
+                               "path":  "eslint.config.js",
+                               "sha256":  "9373661c3eb2aee1b43087ddee58f85f656ef22e0b00d8303d6ffa1456b0f445"
+                           },
+                           {
+                               "path":  "playwright.config.ts",
+                               "sha256":  "443efb517c68797e14a3ac4c6cda6d469e7e606c9b9f6de5cc9fe116fee5a3c9"
+                           },
+                           {
+                               "path":  "management/decisions/ADR-001-WEB-FOUNDATION.md",
+                               "sha256":  "42a67d786638ee30f42462a2900cf6aef1821f25d6ca1b011e67b392c40790d8"
+                           },
+                           {
+                               "path":  "management/decisions/ADR-002-VERSIONED-DATA-CONTRACT.md",
+                               "sha256":  "7d6773a2a20f30597afdad423191703dbfd6b74ce9e0a16b20ca7f1f9e213fa3"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-browser-install.log",
+                               "sha256":  "e94eafafc1ace4b45bb3a21e77cb22f0d40e448208c8031ccf6390bf74786955"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-build-retry.log",
+                               "sha256":  "2407f1699e75d227e97d32206a50a56abacb56204986ebefe1074e6aab65a74d"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-build.log",
+                               "sha256":  "c209d5cda6ac237176ed6b7b90832bc847eb256fcfa2c44d74aaf0f3ff4fde7a"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-dev-http.log",
+                               "sha256":  "7772d1127949ef5d460a99db302dccc63040c68c965b7a1dd193fd1e018507ca"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-e2e.log",
+                               "sha256":  "1da4cc157c8b0a5d359a2f2ced872f07114b7fc7a88e8156ec58101b01dedb8f"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-final-format-check.log",
+                               "sha256":  "9f7158bfd6744381d4a43a4d6451e0ac1abab5e3f05ad6aaf2ed7d4a64883aaf"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-format-check-retry.log",
+                               "sha256":  "9f7158bfd6744381d4a43a4d6451e0ac1abab5e3f05ad6aaf2ed7d4a64883aaf"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-format-check.log",
+                               "sha256":  "bacfe15fa0ecb2ea1a82e6c52883c95efa7ebce14b6ecf13ce2038a0cd64f8a8"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-format-retry.log",
+                               "sha256":  "ebb9ac3d0d2ac3415df03323018097da3cae583608631326d4639a6f5be45c38"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-format.log",
+                               "sha256":  "619ffa5a2daf0f949a0fb4720b9b5bf4607c6c18d0eefa139cb670e66f80858a"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-frozen-install.log",
+                               "sha256":  "2f9391850067081d2a7638a425b62d5f1cb67f9058f43fbdeb653618b0d2b68b"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-install.log",
+                               "sha256":  "cee100688853938d49ba6a2e708f33f40589bc8ce9668e6611a42d3f00b498a9"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-lint.log",
+                               "sha256":  "6c4ec7c72bf3a5588a05f51e44b333527243be16fc11c44cea9a24742ee1d0d5"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-test.log",
+                               "sha256":  "14f86bf742b7b897efc845de90626fe3adc8aec8ea75590ff4356a3f6b554d57"
+                           },
+                           {
+                               "path":  "management/tests/logs/S01-typecheck.log",
+                               "sha256":  "bcc76d5b5c468f0d46850bd086f96253e46baab8aef81472bca3be09b34afd3a"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-build.log",
+                               "sha256":  "cf9983e6f3226b485d74fa8852fd4dbf317f06f97e80c0ddcd3486b9d5bbd0e5"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-format-check.log",
+                               "sha256":  "9f7158bfd6744381d4a43a4d6451e0ac1abab5e3f05ad6aaf2ed7d4a64883aaf"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-format.log",
+                               "sha256":  "7cd5d05eb3055225ba805c739b8eb33246a19d30c9ddfdb5804b665e1ca98bed"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-frozen-install.log",
+                               "sha256":  "e9603d1d53816c2be5a5dfdc62ee10ded2d204544144e8c793f19439436215f0"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-install.log",
+                               "sha256":  "e71cbb0ac98b1538b1ca5e6f84c3c78556e64565cad7cde46029ed97abc2c90c"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-lint.log",
+                               "sha256":  "6c4ec7c72bf3a5588a05f51e44b333527243be16fc11c44cea9a24742ee1d0d5"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-package-smoke.log",
+                               "sha256":  "3e622f410b8b0d1537b2370af886055a1f4bac8ba46bad640cf1bbf139b184c7"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-test-e2e.log",
+                               "sha256":  "4e046f8da330fe1a844bee7920909f9b2b5c7a4af830d7fcf01b88e0be72fefe"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-test.log",
+                               "sha256":  "9066f77bb1b84a23745b0915e6c743a6027e182d948b16cc62f94e1912402c97"
+                           },
+                           {
+                               "path":  "management/tests/logs/S02-typecheck.log",
+                               "sha256":  "c40bc8cab6cc92f8b060b207894f4cfbd824cbdf2670b2ffbc9f41cf754c44f1"
+                           },
+                           {
+                               "path":  "management/tests/artifacts/S01-desktop.png",
+                               "sha256":  "6f97cd24168958f506c2ed75c0f3e8e3c62f252645f90101f33d3dff5b27b626"
+                           },
+                           {
+                               "path":  "management/tests/artifacts/S01-mobile.png",
+                               "sha256":  "d35a2d7a1b25422af8522ccccfcdfbe5684cf3cb2b15315cef11242a968ba7c6"
+                           }
+                       ],
+    "historicalPrefixes":  [
+                               {
+                                   "path":  "management/progress/CHANGELOG.md",
+                                   "content":  "# 變更紀錄\n\n## 2026-11-17 — S01 DONE\n- 建立 pnpm workspace 與 React/Vite/TypeScript 繁體中文響應式首頁。\n- 建立 ESLint、Prettier、Vitest、Playwright 桌面/手機測試及 GitHub Actions CI。\n- 缺少正式資料時顯示尚無可信 DPS，可展開/收起必要資料清單，不提供虛構版本與等級。\n- 完成本機依賴安裝、鎖檔重裝、格式、Lint、型別、2 個 Vitest、建置及 2 個 E2E；保存日誌與畫面。\n- 修正 Windows 工具鏈啟動與 CSS 編碼缺陷。\n- 補齊 README、ADR-001、準備清單與測試報告；S02 尚未開始。\n## 2026-11-17 — S02 DONE\n- 新增 @wwm/game-data：版本/合法等級/流派/武學/屬性/來源/技能/公式/裝備/詞條 Zod 契約與 TypeScript 型別。\n- 新增結構驗證入口，拒絕重複 ID、跨版本與失效引用；不補值、不執行公式、不抓取來源。\n- UNKNOWN/null、零值、人工確認與推估證據分明；所有裝備共用一個模型，原始/當前/預覽/上限分別保存。\n- 候選名冊保留需求 11 流派及待核名稱；合成 fixtures 不進入 production 產物。\n- 根 typecheck/test/build 覆蓋各 workspace；51 項新契約測試、2 項首頁與2 項 E2E、Lint/格式/型別/建置/套件 smoke 全部通過。\n- 新增 ADR-002、S02 準備清單、套件 README 與測試日誌；S03 尚未開始。"
+                               },
+                               {
+                                   "path":  "management/tests/TEST-RUNS.md",
+                                   "content":  "# 測試執行紀錄\n\n## 2026-11-17 — S01 本機集中驗收：PASS\n環境：Windows PowerShell、Node v22.14.0（官方 ZIP SHA256 比對通過）、pnpm 10.6.5、React 19、Vite 6.4.6、Vitest 3.2.7、Playwright 1.65.1 Chromium。\n日期依使用者 Asia/Taipei 工作日期；原始工具日誌包含執行主機的時間。\n\n| 命令 | 實際結果 | 日誌（相對本目錄） |\n|---|---|---|\n| pnpm.cmd install | PASS，271 個套件；已生成 lockfile | logs/S01-install.log |\n| pnpm.cmd install --frozen-lockfile | PASS，lockfile up to date | logs/S01-frozen-install.log |\n| pnpm.cmd format:check（第一次） | FAIL，CSS Unclosed string | logs/S01-format-check.log |\n| pnpm.cmd lint | PASS，exit 0 | logs/S01-lint.log |\n| pnpm.cmd typecheck | PASS，exit 0 | logs/S01-typecheck.log |\n| pnpm.cmd test | PASS，1 檔／2 測試 | logs/S01-test.log |\n| pnpm.cmd build（第一次） | exit 0 但有 CSS 語法警告，不採作最終驗收 | logs/S01-build.log |\n| pnpm.cmd format:check（修正後） | PASS，All matched files use Prettier code style | logs/S01-format-check-retry.log |\n| pnpm.cmd build（修正後） | PASS，29 modules，無 CSS 語法警告 | logs/S01-build-retry.log |\n| pnpm.cmd exec playwright install chromium | PASS，瀏覽器下載完成 | logs/S01-browser-install.log |\n| pnpm.cmd test:e2e | PASS，桌面與手機各 1 測試，共 2 passed；無 pageerror 或水平溢出 | logs/S01-e2e.log |\n| pnpm.cmd dev --port 5173 --strictPort | PASS，Vite ready 235ms；HTTP GET 200 | logs/S01-dev-http.log |\n\n人工視覺檢查：已開啟 artifacts/S01-desktop.png（1440×1100）及 artifacts/S01-mobile.png（390px 全頁），確認標題、配置表單、缺資料提示與手機單欄排列正常。\n範圍：僅 S01 基礎首頁、啟動與工具鏈；沒有驗證真實遊戲 DPS、未實作功能或遠端 CI 執行。\n非失敗訊息：安裝出現 ESLint 9、jest-dom 等套件維護警告；E2E 有終端色彩環境警告。未隱藏此訊息，後續維護時評估升版。\n缺陷：ISSUE-001（Windows 工具鏈）、ISSUE-002（CSS 編碼）已修正並驗收。\n## 2026-11-17 — S02 本機集中驗收：PASS\n環境：Windows PowerShell、Node v22.14.0、pnpm 10.6.5、Zod 4（精確版見 pnpm-lock.yaml）、Vitest 3.2.7、TypeScript、Chromium。\n日期依使用者 Asia/Taipei 工作日期；原始日誌為執行主機時鐘。\n\n| 命令 | 實際結果 | 日誌（相對本目錄） |\n|---|---|---|\n| pnpm.cmd install | PASS，3 workspace、新增 1 套件 | logs/S02-install.log |\n| pnpm.cmd format:check | PASS | logs/S02-format-check.log |\n| pnpm.cmd lint | PASS，exit 0 | logs/S02-lint.log |\n| pnpm.cmd typecheck | PASS，web 與 game-data | logs/S02-typecheck.log |\n| pnpm.cmd test | PASS，game-data 51 項 + 首頁 2 項 | logs/S02-test.log |\n| pnpm.cmd build | PASS，資料套件 ESM/型別/JSON 與 Web | logs/S02-build.log |\n| pnpm.cmd test:e2e | PASS，桌面/手機 Chromium 各 1 項 | logs/S02-test-e2e.log |\n| pnpm.cmd install --frozen-lockfile | PASS，lockfile up to date | logs/S02-frozen-install.log |\n| node --input-type=module（stdin 編譯產物 smoke assertions） | PASS，dist/index.js 匯入、11 候選、UNKNOWN null、名冊不可當 release、測試 fixtures 不在 dist | logs/S02-package-smoke.log |\n\n契約覆蓋：有效與無效版本、非連續/空合法等級、無硬編上限、重複 ID、跨版本/外鍵/來源缺失、錯配武學與技能、未知值與零值、非有限值/字串拒絕、推估與人工確認證據、裝備來源共用契約、current/effective/maximum 分離、未確認 OCR 不可標確認值、整數毫秒、11 候選與第 12 流派擴充。\n本輪無測試失敗；安裝沿用既有套件維護警告，E2E 有終端色彩警告，命令皆 exit 0。\n限制：僅結構驗證，不代表資料來源真實、裝備合法、公式可信或有可用 DPS；S03 審核/匯入、S07 合法值引擎尚未實作。CI 設定涵蓋遞迴命令，但未宣稱遠端 CI 已執行。\n需求衝突已記 ADR-002：舊 Build 範例分庫與新統一裝備規格不符，遵守 docs/09 \u003e 08 \u003e 舊範例。"
+                               }
+                           ]
+}

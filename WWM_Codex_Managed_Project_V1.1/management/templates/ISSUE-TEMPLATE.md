@@ -1,0 +1,11 @@
+# ISSUE-編號 — 標題
+- 類型：BUG / DEPENDENCY / DATA / ENVIRONMENT / DECISION
+- 發現步驟：
+- 狀態：OPEN / BLOCKED / FIXING / VERIFIED / CLOSED
+- 重現步驟與實際結果：
+- 預期結果：
+- 影響功能與測試：
+- 前置依賴／阻塞來源：
+- 可繼續的其他步驟：
+- 恢復條件與負責項目：
+- 修正及重測紀錄：

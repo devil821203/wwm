@@ -1,0 +1,16 @@
+node_modules
+dist
+.tools
+.pnpm-store
+pnpm-lock.yaml
+playwright-report
+test-results
+requirements
+management
+AGENTS.md
+CODEX_START_PROMPT.md
+
+# Preserve the original user-provided specification package byte-for-byte.
+WWM_Codex_Managed_Project_V1.1/
+
+apps/web/public/ocr-assets/

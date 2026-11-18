@@ -1,0 +1,356 @@
+{
+    "format":  "WWM_PATH_SOURCE_REVIEW",
+    "schemaVersion":  "1.0.0",
+    "sourceCommit":  "b021a2cac8c1a723e0c2b5c06b8ca29197415010",
+    "sourceSha256":  "73f75d198c74154de4cf10ed32fde3ace02a00562c8bbefb2be2296ef7c521db",
+    "region":  "GLOBAL",
+    "regionEvidence":  "USER_CONFIRMED_2026-11-18",
+    "gameVersionId":  "global-1-0-334-64785",
+    "licenseStatus":  "UNVERIFIED_DATA_RIGHTS",
+    "publicationStatus":  "DRAFT_REVIEW",
+    "entries":  [
+                    {
+                        "sourceIndex":  0,
+                        "sourceName":  "Strategic Sword",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  1,
+                        "sourceName":  "Nameless Sword",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  2,
+                        "sourceName":  "Heavenquaker Spear",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  3,
+                        "sourceName":  "Nameless Spear",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  4,
+                        "sourceName":  "Panacea Fan",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  5,
+                        "sourceName":  "Inkwell Fan",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  6,
+                        "sourceName":  "Willowbend Fan",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  7,
+                        "sourceName":  "Stormbreaker Spear",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  8,
+                        "sourceName":  "Thundercry Blade",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  9,
+                        "sourceName":  "Phalanxbane Blade",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  10,
+                        "sourceName":  "Infernal Twinblades",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  11,
+                        "sourceName":  "Riven Twinblades",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  12,
+                        "sourceName":  "Vernal Umbrella",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  13,
+                        "sourceName":  "Soulshade Umbrella",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  14,
+                        "sourceName":  "Everspring Umbrella",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  15,
+                        "sourceName":  "Mortal Rope Dart",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  16,
+                        "sourceName":  "Unfettered Rope Dart",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  17,
+                        "sourceName":  "Skygrasp Rope Dart",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  18,
+                        "sourceName":  "Snowparting Blade",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  19,
+                        "sourceName":  "Heavenwill Gauntlets",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  20,
+                        "sourceName":  "Skystrike Gauntlets",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    },
+                    {
+                        "sourceIndex":  21,
+                        "sourceName":  "Museflow Waist Drum",
+                        "tierIds":  [
+                                        13,
+                                        14
+                                    ],
+                        "martialArtId":  null,
+                        "pathIds":  [
+
+                                    ],
+                        "mappingStatus":  "NEEDS_REVIEW",
+                        "gameVersionId":  "global-1-0-334-64785",
+                        "effectsStatus":  "UNKNOWN"
+                    }
+                ],
+    "gameVersionLabel":  "1.0.334.64785",
+    "versionEvidence":  "USER_ASSUMED_2026-11-18",
+    "levelCap":  100,
+    "levelCapEvidence":  "USER_PROVIDED_2026-11-18",
+    "availableLevels":  [
+
+                        ],
+    "availableLevelsStatus":  "UNKNOWN",
+    "soloWorldLevel":  18,
+    "soloWorldLevelEvidence":  "USER_PROVIDED_2026-11-18",
+    "levelInterpretation":  "CHARACTER_LEVEL_100_AND_SOLO_WORLD_LEVEL_18_DISTINCT",
+    "characterLevel":  100,
+    "characterLevelEvidence":  "USER_PROVIDED_2026-11-18"
+}

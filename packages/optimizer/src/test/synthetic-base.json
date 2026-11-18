@@ -1,0 +1,353 @@
+{
+  "release": {
+    "schemaVersion": "1.0.0",
+    "purpose": "SYNTHETIC_TEST",
+    "version": {
+      "id": "synthetic-damage-v1",
+      "region": "GLOBAL",
+      "label": "合成傷害fixture，非遊戲資料",
+      "availableLevels": [3, 7],
+      "levelCap": 7
+    },
+    "sources": [
+      {
+        "id": "synthetic-source",
+        "gameVersionId": "synthetic-damage-v1",
+        "region": "GLOBAL",
+        "title": "Synthetic only",
+        "url": "https://example.invalid/synthetic-damage",
+        "retrievedAt": "2026-11-17T00:00:00+08:00",
+        "rawHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "licenseStatus": "MANUAL_ONLY",
+        "confidence": "UNKNOWN"
+      }
+    ],
+    "paths": [
+      {
+        "id": "bellstrike_splendor",
+        "gameVersionId": "synthetic-damage-v1",
+        "zhTW": "鳴金·虹（合成測試）",
+        "en": "Synthetic path",
+        "martialArts": ["Synthetic sword", "Synthetic spear"],
+        "martialArtIds": ["synthetic-sword", "synthetic-spear"],
+        "formulaIds": ["synthetic-formula"],
+        "role": "DPS",
+        "mechanicsHint": [],
+        "translationVerified": false,
+        "formulaStatus": "VERIFIED"
+      }
+    ],
+    "martialArts": [
+      {
+        "id": "synthetic-sword",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "Synthetic sword",
+        "translationVerified": false,
+        "skillIds": ["synthetic-skill"]
+      },
+      {
+        "id": "synthetic-spear",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "Synthetic spear",
+        "translationVerified": false,
+        "skillIds": []
+      }
+    ],
+    "stats": [
+      {
+        "id": "attack",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "合成攻擊",
+        "unit": "points",
+        "description": "Not a game stat"
+      },
+      {
+        "id": "unused",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "未使用屬性",
+        "unit": "points",
+        "description": "Not used by this fixture formula"
+      }
+    ],
+    "formulas": [
+      {
+        "id": "synthetic-formula",
+        "gameVersionId": "synthetic-damage-v1",
+        "implementationId": "weighted-hit-v1",
+        "formulaVersion": "synthetic-1",
+        "statBindings": {
+          "attack": "attack"
+        },
+        "evidence": {
+          "status": "VERIFIED",
+          "sourceIds": ["synthetic-source"],
+          "modelVersion": "synthetic-proof-1",
+          "reviewedAt": "2026-11-17T00:00:00+08:00"
+        },
+        "parameters": {
+          "normal-probability": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 0.6,
+            "sourceIds": ["synthetic-source"]
+          },
+          "critical-probability": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 0.25,
+            "sourceIds": ["synthetic-source"]
+          },
+          "insight-probability": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 0.1,
+            "sourceIds": ["synthetic-source"]
+          },
+          "miss-probability": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 0.05,
+            "sourceIds": ["synthetic-source"]
+          },
+          "normal-multiplier": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 1,
+            "sourceIds": ["synthetic-source"]
+          },
+          "critical-multiplier": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 1.5,
+            "sourceIds": ["synthetic-source"]
+          },
+          "insight-multiplier": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 2,
+            "sourceIds": ["synthetic-source"]
+          },
+          "damage-multiplier": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 1.2,
+            "sourceIds": ["synthetic-source"]
+          },
+          "enemy-multiplier": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "RECORDED",
+            "value": 0.5,
+            "sourceIds": ["synthetic-source"]
+          }
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "synthetic-skill",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "合成單技能（非遊戲係數）",
+        "martialArtId": "synthetic-sword",
+        "formulaId": "synthetic-formula",
+        "cooldownMs": null,
+        "castTimeMs": null,
+        "applicability": {
+          "characterLevels": [3, 7],
+          "martialArtLevels": [1]
+        },
+        "hits": [
+          {
+            "id": "hit-a",
+            "offsetMs": 0,
+            "coefficient": {
+              "gameVersionId": "synthetic-damage-v1",
+              "status": "RECORDED",
+              "value": 2,
+              "sourceIds": ["synthetic-source"]
+            },
+            "flatDamage": {
+              "gameVersionId": "synthetic-damage-v1",
+              "status": "RECORDED",
+              "value": 10,
+              "sourceIds": ["synthetic-source"]
+            }
+          }
+        ]
+      }
+    ],
+    "equipment": [
+      {
+        "id": "synthetic-equipment",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "合成紫裝",
+        "slotId": "weapon",
+        "tierId": "tier-a",
+        "quality": "purple",
+        "requiredLevel": 3,
+        "baseStats": [
+          {
+            "statId": "attack",
+            "value": {
+              "gameVersionId": "synthetic-damage-v1",
+              "status": "RECORDED",
+              "value": 80,
+              "sourceIds": ["synthetic-source"]
+            }
+          }
+        ],
+        "allowedAffixIds": ["attack-affix", "unused-affix"],
+        "legality": {
+          "ruleVersion": "synthetic-rules-1",
+          "verified": true,
+          "sourceIds": ["synthetic-source"],
+          "minAffixes": 1,
+          "maxAffixes": 2,
+          "tuningStages": [0],
+          "exclusionGroups": []
+        }
+      }
+    ],
+    "affixes": [
+      {
+        "id": "attack-affix",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "合成詞條",
+        "statId": "attack"
+      },
+      {
+        "id": "unused-affix",
+        "gameVersionId": "synthetic-damage-v1",
+        "name": "未使用詞條",
+        "statId": "unused"
+      }
+    ],
+    "affixCaps": [
+      {
+        "id": "attack-cap",
+        "gameVersionId": "synthetic-damage-v1",
+        "tierId": "tier-a",
+        "quality": "purple",
+        "affixId": "attack-affix",
+        "tuningStage": 0,
+        "minimum": {
+          "gameVersionId": "synthetic-damage-v1",
+          "status": "RECORDED",
+          "value": 0,
+          "sourceIds": ["synthetic-source"]
+        },
+        "maximum": {
+          "gameVersionId": "synthetic-damage-v1",
+          "status": "RECORDED",
+          "value": 100,
+          "sourceIds": ["synthetic-source"]
+        },
+        "chengYinValue": {
+          "gameVersionId": "synthetic-damage-v1",
+          "status": "RECORDED",
+          "value": 94,
+          "sourceIds": ["synthetic-source"]
+        },
+        "unit": "points",
+        "step": 1,
+        "roundingRule": "ROUND",
+        "precisionVerified": true,
+        "chengYinModel": {
+          "formulaId": "synthetic-formula",
+          "modelVersion": "synthetic-ratio-1",
+          "registeredAt": "2026-11-17T00:00:00+08:00",
+          "ratio": 0.94,
+          "sourceIds": ["synthetic-source"],
+          "precision": 0,
+          "precisionVerified": true
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "synthetic-character",
+    "name": "合成角色",
+    "gameVersionId": "synthetic-damage-v1",
+    "pathId": "bellstrike_splendor",
+    "level": 3,
+    "realm": "",
+    "createdAt": "2026-11-17T00:00:00+08:00",
+    "updatedAt": "2026-11-17T00:00:00+08:00"
+  },
+  "build": {
+    "id": "synthetic-build",
+    "characterId": "synthetic-character",
+    "name": "合成配置",
+    "panelMode": "BASE_ONLY",
+    "stats": [
+      {
+        "statId": "attack",
+        "value": {
+          "gameVersionId": "synthetic-damage-v1",
+          "status": "RECORDED",
+          "value": 100,
+          "sourceIds": ["synthetic-source"]
+        }
+      }
+    ],
+    "equipmentIds": ["synthetic-instance"],
+    "martialArts": [
+      {
+        "id": "synthetic-sword",
+        "level": 1
+      }
+    ],
+    "innerWays": [],
+    "mysticSkillIds": [],
+    "talentIds": [],
+    "notes": "Synthetic only",
+    "createdAt": "2026-11-17T00:00:00+08:00",
+    "updatedAt": "2026-11-17T00:00:00+08:00"
+  },
+  "equipment": [
+    {
+      "id": "synthetic-instance",
+      "name": "合成裝備",
+      "gameVersionId": "synthetic-damage-v1",
+      "definitionId": "synthetic-equipment",
+      "slotId": "weapon",
+      "tierId": "tier-a",
+      "quality": "purple",
+      "isChengYin": true,
+      "tuningStage": 0,
+      "creationMethod": "MANUAL",
+      "evidenceIds": [],
+      "baseStats": [],
+      "affixes": [
+        {
+          "affixId": "attack-affix",
+          "valueMode": "CHENG_YIN",
+          "current": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "UNKNOWN",
+            "value": null,
+            "reason": "合成fixture缺值"
+          },
+          "effective": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "UNKNOWN",
+            "value": null,
+            "reason": "合成fixture缺值"
+          },
+          "maximum": {
+            "gameVersionId": "synthetic-damage-v1",
+            "status": "UNKNOWN",
+            "value": null,
+            "reason": "合成fixture缺值"
+          }
+        }
+      ],
+      "validation": {
+        "status": "UNVERIFIED",
+        "reasons": ["Synthetic fixture"]
+      }
+    }
+  ],
+  "skillId": "synthetic-skill",
+  "onlyExplicit": false,
+  "evaluatedAt": "2026-11-17T00:00:00+08:00"
+}

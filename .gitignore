@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.tools/
+.pnpm-store/
+playwright-report/
+test-results/
+*.tsbuildinfo
+apps/web/public/ocr-assets/

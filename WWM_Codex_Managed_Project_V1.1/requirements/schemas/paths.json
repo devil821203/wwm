@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "0.1.0",
+  "region": "GLOBAL",
+  "sourceStatus": "COMMUNITY_CROSSCHECK_REQUIRED",
+  "paths": [
+    {
+      "id": "bellstrike_splendor",
+      "zhTW": "鳴金·虹",
+      "en": "Bellstrike Splendor",
+      "martialArts": [
+        "無名劍法",
+        "無名槍法"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "charge",
+        "projectile"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "bellstrike_umbra",
+      "zhTW": "鳴金·影",
+      "en": "Bellstrike Umbra",
+      "martialArts": [
+        "積矩九劍",
+        "九曲驚神槍"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "bleed",
+        "dot"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "silkbind_jade",
+      "zhTW": "牽絲·玉",
+      "en": "Silkbind Jade",
+      "martialArts": [
+        "九重春色",
+        "青山執筆"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "airborne",
+        "combo"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "silkbind_deluge",
+      "zhTW": "牽絲·霖",
+      "en": "Silkbind Deluge",
+      "martialArts": [
+        "明川藥典",
+        "千香引魂蠱"
+      ],
+      "role": "HEAL",
+      "mechanicsHint": [
+        "healing",
+        "support"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "silkbind_wings",
+      "zhTW": "牽絲·翼（待核）",
+      "en": "Silkbind Wings",
+      "martialArts": [
+        "Museflow Waist Drum",
+        "Willowbend Fan"
+      ],
+      "role": "SUPPORT",
+      "mechanicsHint": [
+        "party_buff"
+      ],
+      "translationVerified": false,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "stonesplit_might",
+      "zhTW": "裂石·威",
+      "en": "Stonesplit Might",
+      "martialArts": [
+        "嗟夫刀法",
+        "八方風雷槍"
+      ],
+      "role": "TANK",
+      "mechanicsHint": [
+        "shield",
+        "mitigation"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "stonesplit_strength",
+      "zhTW": "裂石·力（待核）",
+      "en": "Stonesplit Strength",
+      "martialArts": [
+        "Snowparting Blade",
+        "Phalanxbane Blade"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "heavy_hit"
+      ],
+      "translationVerified": false,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "bamboocut_wind",
+      "zhTW": "破竹·風",
+      "en": "Bamboocut Wind",
+      "martialArts": [
+        "泥犁三垢",
+        "栗子遊塵"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "fast_hits"
+      ],
+      "translationVerified": true,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "bamboocut_dust",
+      "zhTW": "破竹·塵（待核）",
+      "en": "Bamboocut Dust",
+      "martialArts": [
+        "Everspring Umbrella",
+        "Unfettered Rope Dart"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "rope_dart"
+      ],
+      "translationVerified": false,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "bamboocut_kite",
+      "zhTW": "破竹·鳶（待核）",
+      "en": "Bamboocut Kite",
+      "martialArts": [
+        "Heavenwill Gauntlets",
+        "Skygrasp Rope Dart"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "gauntlet"
+      ],
+      "translationVerified": false,
+      "formulaStatus": "UNKNOWN"
+    },
+    {
+      "id": "bamboocut_draught",
+      "zhTW": "破竹·?（待核）",
+      "en": "Bamboocut Draught",
+      "martialArts": [
+        "Skystrike Gauntlets",
+        "Riven Twinblades"
+      ],
+      "role": "DPS",
+      "mechanicsHint": [
+        "gauntlet",
+        "twinblades"
+      ],
+      "translationVerified": false,
+      "formulaStatus": "UNKNOWN"
+    }
+  ]
+}

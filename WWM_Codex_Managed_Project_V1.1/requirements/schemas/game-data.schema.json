@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Game data release",
+  "type": "object",
+  "required": [
+    "region",
+    "version",
+    "availableLevels",
+    "paths",
+    "sources"
+  ],
+  "properties": {
+    "region": {
+      "const": "GLOBAL"
+    },
+    "version": {
+      "type": "string"
+    },
+    "availableLevels": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "uniqueItems": true
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "formulaStatus"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "formulaStatus": {
+            "enum": [
+              "VERIFIED",
+              "ESTIMATED",
+              "PARTIAL",
+              "UNKNOWN"
+            ]
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array"
+    },
+    "equipment": {
+      "type": "array"
+    },
+    "skills": {
+      "type": "array"
+    }
+  }
+}
