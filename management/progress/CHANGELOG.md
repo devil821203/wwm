@@ -146,3 +146,6 @@ pnpm --filter @wwm/game-data typecheck：通過；pnpm --filter @wwm/game-data t
 ## S10 損壞後驗收補強：2026-11-19
 
 依 S10 清單增加四項合成測試：Buff 到期瞬間、預估戰鬥規則與明確資料限制、跨版本資源、10000 事件上限與不輸出部分傷害。Windows、Node 22.14.0、pnpm 10.6.5；`pnpm format:check`、`pnpm lint`、`pnpm typecheck`、`pnpm build` 通過；`pnpm test` 336 項通過（game-data 172、stat-engine 48、combat-engine 33、optimizer 9、web 74）；`pnpm test:e2e` 42 項通過。日誌：management/tests/logs/s10-recovery-2026-11-19-222313/。本輪補強完成；原始損壞測試沒有完整備份，無法證明重建覆蓋與原始案例一致，ISSUE-018 維持 OPEN。S14 依 ISSUE-016 維持 BLOCKED。
+## S10 技能變體驗收：2026-11-19
+
+補充三項合成測試：蓄力時間不得超過施放時間、變體必要狀態、劍氣門檻與資源扣除原子性。第一次必要狀態案例因合成輔助技能意外繼承變體而失敗，修正 fixture 後戰鬥檔 26 項通過。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、build 通過；test 339 項通過（172/48/36/9/74）。首次完整 E2E 41 通過、1 失敗，手機最佳化取消實際為搜尋完成；單檔手機重複五次共 10 項通過，完整 E2E 重跑 42 項通過。偶發問題另見 ISSUE-019，尚未證實已解決。日誌位於 management/tests/logs/s10-variant-2026-11-19-2238/。本輪三個測試驗收完成；原 S10 檔案無完整備份，ISSUE-018 保持 OPEN，S14 仍 BLOCKED。

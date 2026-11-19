@@ -329,4 +329,79 @@ describe('S10 fixed/priority combat — all data synthetic', () => {
     expect(r.totalExpectedDamage).toBeNull();
     expect(r.issues.join()).toContain('10000');
   });
+  it('requires a charged variant to fit its declared cast duration', () => {
+    const f = combatFixture();
+    const skill = f.release.skills[0];
+    skill.variants = [
+      {
+        id: 'charged',
+        name: 'Synthetic charged',
+        applicability: structuredClone(skill.applicability!),
+        chargeMs: 300,
+        requiredStateIds: [],
+        swordEnergy: recorded(0),
+        hits: structuredClone(skill.hits),
+        events: [],
+        combat: { ...skill.combat!, castDurationMs: 100 },
+      },
+    ];
+    f.plan.actions = [{ atMs: 0, action: { ...cast, variantId: 'charged' } }];
+    expect(runRotation(f).issues.join()).toContain('蓄力時間');
+    skill.variants[0].combat!.castDurationMs = 300;
+    expect(runRotation(f).status).toBe('VALID');
+  });
+  it('requires a charged variant state and accepts it while active', () => {
+    const f = combatFixture();
+    const skill = f.release.skills[0];
+    skill.variants = [
+      {
+        id: 'charged',
+        name: 'Synthetic charged',
+        applicability: structuredClone(skill.applicability!),
+        chargeMs: 100,
+        requiredStateIds: ['boost'],
+        swordEnergy: recorded(0),
+        hits: structuredClone(skill.hits),
+        events: [],
+        combat: structuredClone(skill.combat!),
+      },
+    ];
+    const charged = { ...cast, variantId: 'charged' };
+    f.plan.actions = [{ atMs: 0, action: charged }];
+    expect(runRotation(f).issues.join()).toContain('缺少必要狀態');
+    const apply = utility(f, 'apply-required', [
+      { id: 'apply', offsetMs: 0, kind: 'APPLY_BUFF', targetId: 'boost' },
+    ]);
+    f.release.skills.find((item) => item.id === 'apply-required')!.variants =
+      undefined;
+    f.plan.actions = [
+      { atMs: 0, action: apply },
+      { atMs: 100, action: charged },
+    ];
+    expect(runRotation(f).status).toBe('VALID');
+  });
+  it('enforces sword energy threshold before applying a cast cost', () => {
+    const f = combatFixture();
+    const skill = f.release.skills[0];
+    skill.variants = [
+      {
+        id: 'charged',
+        name: 'Synthetic charged',
+        applicability: structuredClone(skill.applicability!),
+        chargeMs: 100,
+        requiredStateIds: [],
+        swordEnergy: recorded(11),
+        hits: structuredClone(skill.hits),
+        events: [],
+        combat: { ...skill.combat!, swordEnergyMode: 'REQUIRE_MINIMUM' },
+      },
+    ];
+    f.plan.actions = [{ atMs: 0, action: { ...cast, variantId: 'charged' } }];
+    const rejected = runRotation(f);
+    expect(rejected.issues.join()).toContain('劍氣不足');
+    expect(rejected.finalState.resources.energy).toBe(10);
+    skill.variants[0].swordEnergy = recorded(10);
+    expect(runRotation(f).status).toBe('VALID');
+    expect(runRotation(f).finalState.resources.energy).toBe(8);
+  });
 });
