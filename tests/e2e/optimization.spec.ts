@@ -1,13 +1,13 @@
 import { readFile } from 'node:fs/promises';
 import { expect, test, type Page } from '@playwright/test';
 import { optimizerArchive } from '../../packages/optimizer/src/test/fixtures.js';
-async function load(page: Page) {
+async function load(page: Page, archive = optimizerArchive()) {
   await page.goto('/');
   await page.getByRole('button', { name: '角色與配置', exact: true }).click();
   await page.getByLabel('匯入玩家備份').setInputFiles({
     name: 'synthetic-optimizer.json',
     mimeType: 'application/json',
-    buffer: Buffer.from(JSON.stringify(optimizerArchive())),
+    buffer: Buffer.from(JSON.stringify(archive)),
   });
   await page.getByRole('button', { name: '匯入已檢查備份' }).click();
   await expect(page.getByRole('status')).toHaveText('備份已匯入。');
@@ -88,4 +88,43 @@ test('Beam無最優宣稱、預算缺值不當零、取消後可重啟', async (
   );
   await page.getByRole('button', { name: '開始最佳化' }).click();
   await expect(page.getByLabel('候選DPS 1')).toHaveText('930');
+});
+
+test('真實 Worker 長搜尋收到進度後可取消且不寫入配置', async ({ page }) => {
+  const archive = optimizerArchive();
+  const originalBuild = structuredClone(archive.builds[0]);
+  const originals = structuredClone(archive.equipment);
+  for (const slot of ['head', 'weapon']) {
+    const template = originals.find((item) => item.slotId === slot)!;
+    for (let i = 0; i < 150; i++) {
+      archive.equipment.push({
+        ...structuredClone(template),
+        id: `${slot}-extra-${i}`,
+        name: `合成 ${slot} ${i}`,
+      });
+    }
+  }
+  await load(page, archive);
+  await page.getByRole('button', { name: '開始最佳化' }).click();
+  await expect(page.getByRole('status', { name: '最佳化進度' })).toContainText(
+    '搜尋中：',
+  );
+  await page.getByRole('button', { name: '取消最佳化' }).click();
+  await expect(page.getByRole('status', { name: '最佳化進度' })).toHaveText(
+    '已取消，未保存部分排名或修改配置',
+  );
+  await expect(page.getByLabel('最佳化結果')).toHaveCount(0);
+  await page.getByLabel('鎖定 head').selectOption('head-0');
+  await page.getByLabel('鎖定 weapon').selectOption('weapon-0');
+  await page.getByRole('button', { name: '開始最佳化' }).click();
+  await expect(page.getByLabel('候選DPS 1')).toBeVisible();
+  await page.getByRole('button', { name: '角色與配置', exact: true }).click();
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: '下載 JSON 備份' }).click();
+  const backup = JSON.parse(
+    await readFile((await (await download).path())!, 'utf8'),
+  );
+  expect(backup.builds).toHaveLength(1);
+  expect(backup.builds[0]).toEqual(originalBuild);
+  expect(backup.equipment).toHaveLength(archive.equipment.length);
 });
