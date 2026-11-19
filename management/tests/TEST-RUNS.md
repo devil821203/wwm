@@ -422,3 +422,6 @@ S10 測試重建狀態 IN_PROGRESS：重建 combat-engine/src/engine.test.ts、a
 ## 2026-11-19 08:07：dev 完整測試
 
 測試基準提交 9bf4894；Windows，Node.js 22.14.0、pnpm 10.6.5，桌面及手機 Chromium。`pnpm format:check`、`pnpm lint`、`pnpm typecheck`、`pnpm build` 均通過；`pnpm test` 332 項通過（game-data 172、stat-engine 48、combat-engine 29、optimizer 9、web 74）；`pnpm test:e2e` 42 項通過。各命令完整結果保存於 management/tests/logs/verification-2026-11-19-0807/。本輪為既有功能回歸，沒有證明已完整恢復原 S10 測試覆蓋或驗證真實遊戲數值；ISSUE-018 維持 OPEN，S14 維持 BLOCKED。
+## S10 損壞後驗收補強：2026-11-19
+
+依 S10 清單增加四項合成測試：Buff 到期瞬間、預估戰鬥規則與明確資料限制、跨版本資源、10000 事件上限與不輸出部分傷害。Windows、Node 22.14.0、pnpm 10.6.5；`pnpm format:check`、`pnpm lint`、`pnpm typecheck`、`pnpm build` 通過；`pnpm test` 336 項通過（game-data 172、stat-engine 48、combat-engine 33、optimizer 9、web 74）；`pnpm test:e2e` 42 項通過。日誌：management/tests/logs/s10-recovery-2026-11-19-222313/。本輪補強完成；原始損壞測試沒有完整備份，無法證明重建覆蓋與原始案例一致，ISSUE-018 維持 OPEN。S14 依 ISSUE-016 維持 BLOCKED。

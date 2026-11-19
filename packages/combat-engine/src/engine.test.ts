@@ -274,4 +274,59 @@ describe('S10 fixed/priority combat — all data synthetic', () => {
     expect(r.trace.filter((e) => e.kind === 'DAMAGE')).toHaveLength(0);
     expect(r.finalState.martialArtId).toBe('synthetic-spear');
   });
+  it('expires a buff before a hit at the exact expiration timestamp', () => {
+    const f = combatFixture();
+    const action = utility(f, 'expiration-boundary', [
+      { id: 'apply', offsetMs: 0, kind: 'APPLY_BUFF', targetId: 'boost' },
+    ]);
+    f.plan.actions = [
+      { atMs: 0, action },
+      { atMs: 450, action: cast },
+    ];
+    const r = runRotation(f);
+    expect(r.status).toBe('VALID');
+    expect(
+      r.trace.find((e) => e.kind === 'DAMAGE' && e.atMs === 500)?.damage,
+    ).toBe(558);
+    expect(
+      r.trace.some((e) => e.kind === 'BUFF_EXPIRE' && e.atMs === 500),
+    ).toBe(true);
+  });
+  it('propagates estimated combat rules and blocks them in explicit-only mode', () => {
+    const f = combatFixture();
+    f.release.combat!.evidence.status = 'ESTIMATED';
+    const r = runRotation(f);
+    expect(r.status).toBe('VALID');
+    expect(r.provenance.containsEstimates).toBe(true);
+    f.plan.onlyExplicit = true;
+    const explicit = runRotation(f);
+    expect(explicit.totalExpectedDamage).toBeNull();
+    expect(explicit.issues.join()).toContain('僅使用明確資料');
+  });
+  it('rejects a resource value from another game version', () => {
+    const f = combatFixture();
+    f.release.combat!.resources[0].initial.gameVersionId = 'other-version';
+    const r = runRotation(f);
+    expect(r.totalExpectedDamage).toBeNull();
+    expect(r.status).not.toBe('VALID');
+  });
+  it('stops priority simulation at the event limit without returning partial damage', () => {
+    const f = combatFixture();
+    f.plan.durationMs = 11000;
+    f.plan.mode = 'PRIORITY';
+    f.plan.actions = [];
+    f.plan.decisionIntervalMs = 1;
+    f.plan.priorityRules = [
+      {
+        action: cast,
+        requiredBuffIds: ['boost'],
+        forbiddenBuffIds: [],
+        resourceId: null,
+        minimum: null,
+      },
+    ];
+    const r = runRotation(f);
+    expect(r.totalExpectedDamage).toBeNull();
+    expect(r.issues.join()).toContain('10000');
+  });
 });
