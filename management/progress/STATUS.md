@@ -78,3 +78,10 @@ S10 測試重建狀態 IN_PROGRESS：重建 combat-engine/src/engine.test.ts、a
 ## S10 技能變體驗收：2026-11-19
 
 補充三項合成測試：蓄力時間不得超過施放時間、變體必要狀態、劍氣門檻與資源扣除原子性。第一次必要狀態案例因合成輔助技能意外繼承變體而失敗，修正 fixture 後戰鬥檔 26 項通過。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、build 通過；test 339 項通過（172/48/36/9/74）。首次完整 E2E 41 通過、1 失敗，手機最佳化取消實際為搜尋完成；單檔手機重複五次共 10 項通過，完整 E2E 重跑 42 項通過。偶發問題另見 ISSUE-019，尚未證實已解決。日誌位於 management/tests/logs/s10-variant-2026-11-19-2238/。本輪三個測試驗收完成；原 S10 檔案無完整備份，ISSUE-018 保持 OPEN，S14 仍 BLOCKED。
+## ISSUE-019 最佳化取消驗收（本輪 DONE）
+
+依 S13 清單補強取消及舊結果隔離測試，使用可控制的進行中 Worker，不更動遊戲數值；完成後驗證相關單元、桌面／手機 E2E 及完整回歸。
+
+## 2026-11-19：ISSUE-019 取消測試補強
+
+針對 E2E 極小工作可能在取消前完成的時序，測試中攔住一次 Worker 請求，確認取消時工作仍在執行，並在下一次啟動前恢復原方法；此案例不驗證長時間真實搜尋的性能。單元測試另外驗證取消後遲到的 RESULT 不產生排名且狀態維持取消。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 339 項、完整 E2E 42 項；最佳化 E2E 桌面和手機各重複五次共 20 項通過。日誌 management/tests/logs/issue-019-2026-11-19-2244/。原始偶發失敗的根因未經證實，ISSUE-019 保持 OPEN，需後續觀察真實長工作取消；ISSUE-018 與 S14 狀態不變。

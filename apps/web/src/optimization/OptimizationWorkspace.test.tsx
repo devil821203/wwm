@@ -1,4 +1,4 @@
-﻿import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { optimize } from '@wwm/optimizer';
@@ -40,6 +40,13 @@ describe('S13 optimization UI', () => {
     expect(first.terminate).toHaveBeenCalled();
     first.onmessage?.({ data: { type: 'ERROR', message: 'stale' } });
     expect(screen.queryByText('stale')).toBeNull();
+    first.onmessage?.({
+      data: { type: 'RESULT', result: optimize(optimizerFixture()) },
+    });
+    expect(screen.queryByLabelText('最佳化結果')).toBeNull();
+    expect(
+      screen.getByRole('status', { name: '最佳化進度' }),
+    ).toHaveTextContent('已取消');
     await user.click(screen.getByRole('button', { name: '開始最佳化' }));
     view.unmount();
     expect(FakeWorker.instances[1].terminate).toHaveBeenCalled();

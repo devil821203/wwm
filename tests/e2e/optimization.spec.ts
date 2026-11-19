@@ -1,4 +1,4 @@
-﻿import { readFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import { expect, test, type Page } from '@playwright/test';
 import { optimizerArchive } from '../../packages/optimizer/src/test/fixtures.js';
 async function load(page: Page) {
@@ -73,6 +73,14 @@ test('Beam無最優宣稱、預算缺值不當零、取消後可重啟', async (
   await expect(page.getByLabel('最佳化結果')).toContainText('無可用排名');
   await expect(page.getByLabel('候選DPS 1')).toHaveCount(0);
   await page.getByLabel('自訂成本上限（空白不限制）').fill('');
+  // Hold exactly one Worker request so cancellation occurs while it is active.
+  // Restore the native method immediately, allowing the next search to run normally.
+  await page.evaluate(() => {
+    const original = Worker.prototype.postMessage;
+    Worker.prototype.postMessage = function () {
+      Worker.prototype.postMessage = original;
+    };
+  });
   await page.getByRole('button', { name: '開始最佳化' }).click();
   await page.getByRole('button', { name: '取消最佳化' }).click();
   await expect(page.getByRole('status', { name: '最佳化進度' })).toHaveText(
