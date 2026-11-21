@@ -404,4 +404,112 @@ describe('S10 fixed/priority combat — all data synthetic', () => {
     expect(runRotation(f).status).toBe('VALID');
     expect(runRotation(f).finalState.resources.energy).toBe(8);
   });
+  it('executes variant energy, state and weapon events in timestamp order', () => {
+    const f = combatFixture();
+    const skill = f.release.skills[0];
+    const event = {
+      targetMartialArtId: null,
+      stateId: null,
+      amount: recorded(0),
+    };
+    skill.variants = [
+      {
+        id: 'events',
+        name: 'Synthetic events',
+        applicability: structuredClone(skill.applicability!),
+        chargeMs: 0,
+        requiredStateIds: [],
+        swordEnergy: recorded(0),
+        hits: structuredClone(skill.hits),
+        combat: structuredClone(skill.combat!),
+        events: [
+          {
+            ...event,
+            id: 'gain',
+            kind: 'SWORD_ENERGY',
+            offsetMs: 10,
+            amount: recorded(1),
+          },
+          {
+            ...event,
+            id: 'apply',
+            kind: 'STATE_APPLY',
+            offsetMs: 20,
+            stateId: 'boost',
+          },
+          {
+            ...event,
+            id: 'remove',
+            kind: 'STATE_REMOVE',
+            offsetMs: 70,
+            stateId: 'boost',
+          },
+          {
+            ...event,
+            id: 'switch',
+            kind: 'WEAPON_SWITCH',
+            offsetMs: 100,
+            targetMartialArtId: 'synthetic-spear',
+          },
+        ],
+      },
+    ];
+    f.plan.actions = [{ atMs: 0, action: { ...cast, variantId: 'events' } }];
+    const r = runRotation(f);
+    expect(r.status).toBe('VALID');
+    expect(
+      r.trace
+        .filter((e) =>
+          [
+            'RESOURCE',
+            'BUFF_APPLY',
+            'DAMAGE',
+            'BUFF_REMOVE',
+            'WEAPON_SWITCH',
+          ].includes(e.kind),
+        )
+        .map((e) => [e.atMs, e.kind]),
+    ).toEqual([
+      [0, 'RESOURCE'],
+      [10, 'RESOURCE'],
+      [20, 'BUFF_APPLY'],
+      [50, 'DAMAGE'],
+      [70, 'BUFF_REMOVE'],
+      [100, 'WEAPON_SWITCH'],
+    ]);
+    expect(r.trace.find((e) => e.kind === 'DAMAGE')?.damage).toBe(1116);
+    expect(r.finalState.resources.energy).toBe(9);
+    expect(r.finalState.martialArtId).toBe('synthetic-spear');
+  });
+  it('blocks a variant with unknown event timing without partial damage', () => {
+    const f = combatFixture();
+    const skill = f.release.skills[0];
+    skill.variants = [
+      {
+        id: 'untimed',
+        name: 'Synthetic untimed',
+        applicability: structuredClone(skill.applicability!),
+        chargeMs: 0,
+        requiredStateIds: [],
+        swordEnergy: recorded(0),
+        hits: structuredClone(skill.hits),
+        combat: structuredClone(skill.combat!),
+        events: [
+          {
+            id: 'gain',
+            kind: 'SWORD_ENERGY',
+            offsetMs: null,
+            targetMartialArtId: null,
+            stateId: null,
+            amount: recorded(1),
+          },
+        ],
+      },
+    ];
+    f.plan.actions = [{ atMs: 0, action: { ...cast, variantId: 'untimed' } }];
+    const r = runRotation(f);
+    expect(r.status).not.toBe('VALID');
+    expect(r.totalExpectedDamage).toBeNull();
+    expect(r.issues.join()).toContain('時間未知');
+  });
 });

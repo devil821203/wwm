@@ -31,3 +31,6 @@ S10 測試重建狀態 IN_PROGRESS：重建 combat-engine/src/engine.test.ts、a
 ## S10 技能變體驗收：2026-11-19
 
 補充三項合成測試：蓄力時間不得超過施放時間、變體必要狀態、劍氣門檻與資源扣除原子性。第一次必要狀態案例因合成輔助技能意外繼承變體而失敗，修正 fixture 後戰鬥檔 26 項通過。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、build 通過；test 339 項通過（172/48/36/9/74）。首次完整 E2E 41 通過、1 失敗，手機最佳化取消實際為搜尋完成；單檔手機重複五次共 10 項通過，完整 E2E 重跑 42 項通過。偶發問題另見 ISSUE-019，尚未證實已解決。日誌位於 management/tests/logs/s10-variant-2026-11-19-2238/。本輪三個測試驗收完成；原 S10 檔案無完整備份，ISSUE-018 保持 OPEN，S14 仍 BLOCKED。
+## 2026-11-21：S10 技能變體事件驗收
+
+新增兩項合成測試：驗證劍氣、狀態套用／移除、命中及切換武學的事件時間順序與結果；事件時間未知時阻擋並不輸出部分傷害。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 全部通過；單元與整合 341 項（172／48／38／9／74），桌面及手機 E2E 44 項。日誌位於 management/tests/logs/s10-events-2026-11-21-154058/。本輪測試通過，不代表已找到原始受損測試或驗證真實遊戲數值；ISSUE-018、ISSUE-019 保持 OPEN，S14 保持 BLOCKED。
