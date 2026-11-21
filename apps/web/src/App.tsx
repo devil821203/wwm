@@ -11,6 +11,7 @@ const SimulationWorkspace = lazy(
 );
 const RotationWorkspace = lazy(() => import('./rotation/RotationWorkspace'));
 const DamageWorkspace = lazy(() => import('./calculation/DamageWorkspace'));
+const SplendorPreview = lazy(() => import('./preview/SplendorPreview'));
 const EquipmentWorkspace = lazy(() => import('./equipment/EquipmentWorkspace'));
 
 const missingData = [
@@ -23,6 +24,7 @@ export default function App() {
   const [simulationBuildId, setSimulationBuildId] = useState('');
   const [showSources, setShowSources] = useState(false);
   const [page, setPage] = useState<
+    | 'preview'
     | 'overview'
     | 'characters'
     | 'equipment'
@@ -52,6 +54,12 @@ export default function App() {
           onClick={() => setPage('overview')}
         >
           計算工作臺
+        </button>
+        <button
+          aria-current={page === 'preview' ? 'page' : undefined}
+          onClick={() => setPage('preview')}
+        >
+          鳴金·虹試算
         </button>
         <button
           aria-current={page === 'characters' ? 'page' : undefined}
@@ -97,7 +105,11 @@ export default function App() {
         </button>
       </nav>
       <main id="main">
-        {page === 'optimization' ? (
+        {page === 'preview' ? (
+          <Suspense fallback={<p>載入試算紀錄…</p>}>
+            <SplendorPreview />
+          </Suspense>
+        ) : page === 'optimization' ? (
           <Suspense fallback={<p>載入最佳化…</p>}>
             <OptimizationWorkspace
               onSimulate={(id) => {

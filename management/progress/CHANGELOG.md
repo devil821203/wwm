@@ -166,3 +166,8 @@ pnpm --filter @wwm/game-data typecheck：通過；pnpm --filter @wwm/game-data t
 完成 management/data-sources/S14-NAMELESS-REVIEW.md，對照專案候選無名劍／槍與快照 Nameless Sword／Spear，記錄兩個 tier 的天賦類別、使用者提供版本與角色條件、面板是否包含加成及 DPS 所需資料。名稱映射為候選，未標為已驗證；未發布正式資料。
 
 Windows Node 22.14.0：以 node 讀取本地 JSON，驗證 SHA-256 73f75d198c74154de4cf10ed32fde3ace02a00562c8bbefb2be2296ef7c521db、原始與 staging 各 22 筆、來源 index 1／3 名稱、tier 13／14 與映射待審核；結果 PASS，兩武學各 tier 有 5／6 項天賦。`git diff --name-only -- data/raw data/staging` 無變更。僅文件與來源對照，未執行應用程式測試或發布。完整 DPS 仍缺版本化係數、時間、公式及面板語意；S14 維持 BLOCKED，ISSUE-016、ISSUE-018、ISSUE-019 維持 OPEN。
+## 2026-11-22：鳴金·虹試算結果顯示
+
+依使用者要求先完成 Web 結果顯示；新增主選單「鳴金·虹試算」，呈現使用者確認的面板、心法、版本、玉斗 3/4，以及先前 55 秒社群參考軸的固定試算紀錄。畫面標示「包含預估資料／預估值」，說明數值未校準、四件套未啟用、結果不隨配置更新；不將結果寫入計算引擎或正式遊戲資料。
+
+Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 344 項（172／48／40／9／75），桌面及手機 E2E 46 項。日誌 management/tests/logs/splendor-web-2026-11-22-025137/。本輪畫面完成；實際運算、社群模型的適用性與遊戲數值正確性仍待後續確認，S14 不標為完成。
