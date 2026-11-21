@@ -440,3 +440,8 @@ S10 測試重建狀態 IN_PROGRESS：重建 combat-engine/src/engine.test.ts、a
 ## 2026-11-21：S10 同時刻與 Buff 重套用驗收
 
 新增兩項合成測試：同毫秒事件 FIFO 順序及施放快照／動態命中的差異；Buff REFRESH 後重新計算到期時間及後續傷害。首次測試因篩選技能命中紀錄漏掉命中 ID 而失敗，修正測試後戰鬥檔 30 項通過。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 343 項（172／48／40／9／74），E2E 44 項；日誌 management/tests/logs/s10-buff-2026-11-21-155237/。原始損壞測試無完整備份，ISSUE-018 保持 OPEN；ISSUE-019 與 S14 狀態不變。
+## 2026-11-21：鳴金·虹來源候選對照
+
+完成 management/data-sources/S14-NAMELESS-REVIEW.md，對照專案候選無名劍／槍與快照 Nameless Sword／Spear，記錄兩個 tier 的天賦類別、使用者提供版本與角色條件、面板是否包含加成及 DPS 所需資料。名稱映射為候選，未標為已驗證；未發布正式資料。
+
+Windows Node 22.14.0：以 node 讀取本地 JSON，驗證 SHA-256 73f75d198c74154de4cf10ed32fde3ace02a00562c8bbefb2be2296ef7c521db、原始與 staging 各 22 筆、來源 index 1／3 名稱、tier 13／14 與映射待審核；結果 PASS，兩武學各 tier 有 5／6 項天賦。`git diff --name-only -- data/raw data/staging` 無變更。僅文件與來源對照，未執行應用程式測試或發布。完整 DPS 仍缺版本化係數、時間、公式及面板語意；S14 維持 BLOCKED，ISSUE-016、ISSUE-018、ISSUE-019 維持 OPEN。

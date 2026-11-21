@@ -47,3 +47,9 @@
 使用者進一步確認目前版本角色等級上限為100。staging 最終狀態為 gameVersionLabel=1.0.334.64785、characterLevel=100、levelCap=100、soloWorldLevel=18，分別保留使用者提供的來源標記；撤銷前述「上限未知」狀態。完整可用等級清單仍未提供，availableLevels 保持 UNKNOWN，不能僅由上限推定。重新解析並驗證所有欄位與22項候選 PASS，沒有修改來源快照或發布資料。
 
 2026-11-18：使用者要求先以此來源計算。快照中的 Strategic Sword「Affinity Rate UP」是明確的條件例子：tier 13、14 的 Power 比例相同但上限條件不同，可作單項屬性加成計算；來源是天賦文字，不能直接當成技能傷害或 DPS。缺少使用者所選武學、tier、Power 和完整循環輸入，不能確定其實際結果。來源快照遭損壞並依固定 commit 及原 SHA-256 還原，ISSUE-017 OPEN，原因未確認。
+
+## 2026-11-21：鳴金·虹來源候選對照
+
+完成 management/data-sources/S14-NAMELESS-REVIEW.md，對照專案候選無名劍／槍與快照 Nameless Sword／Spear，記錄兩個 tier 的天賦類別、使用者提供版本與角色條件、面板是否包含加成及 DPS 所需資料。名稱映射為候選，未標為已驗證；未發布正式資料。
+
+Windows Node 22.14.0：以 node 讀取本地 JSON，驗證 SHA-256 73f75d198c74154de4cf10ed32fde3ace02a00562c8bbefb2be2296ef7c521db、原始與 staging 各 22 筆、來源 index 1／3 名稱、tier 13／14 與映射待審核；結果 PASS，兩武學各 tier 有 5／6 項天賦。`git diff --name-only -- data/raw data/staging` 無變更。僅文件與來源對照，未執行應用程式測試或發布。完整 DPS 仍缺版本化係數、時間、公式及面板語意；S14 維持 BLOCKED，ISSUE-016、ISSUE-018、ISSUE-019 維持 OPEN。
