@@ -99,3 +99,10 @@ S10 測試重建狀態 IN_PROGRESS：重建 combat-engine/src/engine.test.ts、a
 ## 2026-11-21：S10 技能變體事件驗收
 
 新增兩項合成測試：驗證劍氣、狀態套用／移除、命中及切換武學的事件時間順序與結果；事件時間未知時阻擋並不輸出部分傷害。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 全部通過；單元與整合 341 項（172／48／38／9／74），桌面及手機 E2E 44 項。日誌位於 management/tests/logs/s10-events-2026-11-21-154058/。本輪測試通過，不代表已找到原始受損測試或驗證真實遊戲數值；ISSUE-018、ISSUE-019 保持 OPEN，S14 保持 BLOCKED。
+## S10 同時刻與 Buff 重套用驗收（本輪 DONE，2026-11-21）
+
+補測同毫秒事件先後與命中快照／動態狀態，以及 Buff REFRESH 重設到期時間；合成資料、完成後集中驗收。
+
+## 2026-11-21：S10 同時刻與 Buff 重套用驗收
+
+新增兩項合成測試：同毫秒事件 FIFO 順序及施放快照／動態命中的差異；Buff REFRESH 後重新計算到期時間及後續傷害。首次測試因篩選技能命中紀錄漏掉命中 ID 而失敗，修正測試後戰鬥檔 30 項通過。Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 343 項（172／48／40／9／74），E2E 44 項；日誌 management/tests/logs/s10-buff-2026-11-21-155237/。原始損壞測試無完整備份，ISSUE-018 保持 OPEN；ISSUE-019 與 S14 狀態不變。

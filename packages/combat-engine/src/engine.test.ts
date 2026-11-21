@@ -512,4 +512,55 @@ describe('S10 fixed/priority combat — all data synthetic', () => {
     expect(r.totalExpectedDamage).toBeNull();
     expect(r.issues.join()).toContain('時間未知');
   });
+  it('uses FIFO ordering and distinguishes cast snapshot from dynamic hits at the same timestamp', () => {
+    const f = combatFixture();
+    const buff = utility(f, 'same-time-buff', [
+      { id: 'apply', offsetMs: 0, kind: 'APPLY_BUFF', targetId: 'boost' },
+    ]);
+    f.release.skills[0].hits[0].offsetMs = 0;
+    f.plan.actions = [
+      { atMs: 0, action: buff },
+      { atMs: 0, action: cast },
+    ];
+    const hits = () =>
+      runRotation(f).trace.filter(
+        (e) => e.kind === 'DAMAGE' && e.detail.startsWith('synthetic-skill:'),
+      );
+    f.release.skills[0].combat!.scaling = 'SNAPSHOT';
+    const snapshot = runRotation(f);
+    expect(snapshot.status).toBe('VALID');
+    expect(hits()[0].damage).toBe(558);
+    const sameTime = snapshot.trace.filter((e) => e.atMs === 0);
+    expect(sameTime.findIndex((e) => e.kind === 'BUFF_APPLY')).toBeLessThan(
+      sameTime.findIndex(
+        (e) => e.kind === 'DAMAGE' && e.detail.startsWith('synthetic-skill:'),
+      ),
+    );
+    f.release.skills[0].combat!.scaling = 'DYNAMIC';
+    expect(hits()[0].damage).toBe(1116);
+  });
+  it('refreshes a buff expiration from the second application', () => {
+    const f = combatFixture();
+    const buff = utility(f, 'refresh-buff', [
+      { id: 'apply', offsetMs: 0, kind: 'APPLY_BUFF', targetId: 'boost' },
+    ]);
+    f.plan.actions = [
+      { atMs: 0, action: buff },
+      { atMs: 400, action: buff },
+      { atMs: 500, action: cast },
+      { atMs: 1500, action: cast },
+    ];
+    const r = runRotation(f);
+    expect(r.status).toBe('VALID');
+    expect(
+      r.trace.filter((e) => e.kind === 'BUFF_EXPIRE').map((e) => e.atMs),
+    ).toEqual([900]);
+    expect(
+      r.trace
+        .filter(
+          (e) => e.kind === 'DAMAGE' && e.detail.startsWith('synthetic-skill:'),
+        )
+        .map((e) => e.damage),
+    ).toEqual([1116, 558]);
+  });
 });
