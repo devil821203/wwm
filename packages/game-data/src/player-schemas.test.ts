@@ -105,13 +105,7 @@ describe('player backup schema', () => {
         data.equipment = [];
       },
     ],
-    [
-      'cross-version equipment',
-      (data) => {
-        data.equipment[0].gameVersionId = 'other-version';
-        data.equipment[0].affixes = [];
-      },
-    ],
+
     [
       'cross-version panel',
       (data) => {

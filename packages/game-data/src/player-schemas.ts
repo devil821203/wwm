@@ -118,12 +118,6 @@ export const PlayerArchiveSchema = z
       build.equipmentIds.forEach((id, j) => {
         const item = equipment.get(id);
         if (!item) issue(['builds', i, 'equipmentIds', j], 'Missing equipment');
-        else if (
-          item.gameVersionId === null ||
-          character.gameVersionId === null ||
-          item.gameVersionId !== character.gameVersionId
-        )
-          issue(['builds', i, 'equipmentIds', j], 'Equipment version mismatch');
       });
       if (
         character.gameVersionId === null &&

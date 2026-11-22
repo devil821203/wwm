@@ -116,7 +116,7 @@ describe('equipment persistence', () => {
       repo.saveEquipment({ ...first, name: 'Stale' }, [], first),
     ).rejects.toThrow('其他頁面');
   });
-  it('does not equip an unknown-version item', async () => {
+  it('equips an item without requiring a game version', async () => {
     const characterId = await repo.createCharacter({
       name: 'test',
       pathId: 'bellstrike_splendor',
@@ -129,9 +129,11 @@ describe('equipment persistence', () => {
     const build = (await repo.snapshot()).builds.find(
       (entry) => entry.characterId === characterId,
     )!;
-    await expect(repo.assignEquipment(build.id, item.id)).rejects.toThrow(
-      '已知版本',
-    );
+    await repo.assignEquipment(build.id, item.id);
+    expect(
+      (await repo.snapshot()).builds.find((entry) => entry.id === build.id)
+        ?.equipmentIds,
+    ).toContain(item.id);
   });
 });
 

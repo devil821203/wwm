@@ -460,3 +460,8 @@ Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、
 依使用者新規格建立 ADR-014；新增向後相容的裝備等級欄位，新裝備與舊資料編輯預設並儲存 100。使用者確認缺滿值／承音資料時顯示未知並保留手動輸入。此階段尚未解除版本耦合、完成依裝備詞條池的生成表單或紫裝／滿值／承音的互斥自動帶值；整體重構保持 IN_PROGRESS，不能視為完成。
 
 Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 344 項（172／48／40／9／75），E2E 48 項；日誌 management/tests/logs/equipment-level-2026-11-22-115101/。含新裝備預設100及備份寫入檢查。
+## 2026-11-22：裝備版本解耦第一階段
+
+使用者補充不必相容舊版裝備模型，以新規格重構。移除裝備編輯器版本選擇，以及配裝與玩家備份對裝備版本相同的限制；無版本裝備可加入配置。現有傷害引擎仍檢查資料版本，尚未完成以角色版本解析無版本裝備，因此暫不能宣稱無版本裝備已可計算；生成表單及紫裝／滿值／承音互斥自動帶值亦待完成。整體重構維持 IN_PROGRESS。
+
+Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 均通過；單元與整合 343 項（171／48／40／9／75），E2E 48 項；日誌 management/tests/logs/equipment-unversioned-2026-11-22-121558/。

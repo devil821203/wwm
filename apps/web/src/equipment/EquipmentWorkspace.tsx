@@ -75,13 +75,8 @@ export default function EquipmentWorkspace({
       setBusy(false);
     }
   }
-  const builds =
-    data?.builds.filter(
-      (build) =>
-        seed.gameVersionId !== null &&
-        data.characters.find((character) => character.id === build.characterId)
-          ?.gameVersionId === seed.gameVersionId,
-    ) ?? [];
+  const builds = data?.builds ?? [];
+
   return (
     <section className="character-workspace" aria-labelledby="equipment-title">
       <div className="section-heading">
@@ -166,7 +161,7 @@ export default function EquipmentWorkspace({
                         : item.creationMethod === 'GENERATED'
                           ? '生成'
                           : '手動'}{' '}
-                      · {item.gameVersionId ?? '版本未知'} ·{' '}
+                      ·{' '}
                       {item.validation.status === 'VALID'
                         ? '已通過儲存時規則驗證'
                         : '尚未驗證'}
@@ -652,31 +647,8 @@ function EquipmentEditor({
         }
         disabled={busy}
       />
-      <label htmlFor="equipment-version">裝備資料版本</label>
-      <select
-        id="equipment-version"
-        value={draft.gameVersionId ?? ''}
-        disabled={busy}
-        onChange={(event) =>
-          context({
-            gameVersionId: event.target.value || null,
-            definitionId: undefined,
-            slotId: undefined,
-            tierId: null,
-            quality: null,
-          })
-        }
-      >
-        <option value="">未知版本（草稿）</option>
-        {releases.map((release) => (
-          <option key={release.version.id} value={release.version.id}>
-            {release.version.label} /{' '}
-            {release.purpose === 'SYNTHETIC_TEST' ? '合成測試' : '未審核'}
-          </option>
-        ))}
-      </select>
       <p className="field-note">
-        不要求先分類；版本與名稱唯一匹配時才識別部位，查無資料保留草稿。
+        裝備本身不需選擇遊戲版本；傷害計算使用角色的版本資料。
       </p>
       <details>
         <summary>品質與階級等補充欄位（可留白）</summary>

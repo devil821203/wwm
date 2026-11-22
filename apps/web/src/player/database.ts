@@ -485,11 +485,7 @@ export class PlayerRepository {
       );
       if (!item || !build || !character)
         throw new Error('找不到配裝所需的角色、配置或裝備。');
-      if (
-        item.gameVersionId === null ||
-        item.gameVersionId !== character.gameVersionId
-      )
-        throw new Error('裝備與角色必須為同一個已知版本。');
+
       if (!item.slotId)
         throw new Error('裝備部位尚未確認，請先在編輯器補上部位。');
       const previousIds = build.equipmentIds.filter(
