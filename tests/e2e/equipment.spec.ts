@@ -14,6 +14,7 @@ async function backup(page: Page) {
 test('無截圖也能手動校對並保存未知版本裝備', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: '裝備庫', exact: true }).click();
+  await expect(page.getByLabel('裝備等級')).toHaveValue('100');
   await page.getByLabel('裝備名稱（玩家標籤）').fill('人工測試裝備');
   await page.getByRole('button', { name: '新增基礎屬性', exact: true }).click();
   await page.getByLabel('基礎屬性名稱 1').fill('測試攻擊');
@@ -29,6 +30,7 @@ test('無截圖也能手動校對並保存未知版本裝備', async ({ page }) 
   );
   const first = await backup(page);
   expect(first.equipment[0].gameVersionId).toBeNull();
+  expect(first.equipment[0].equipmentLevel).toBe(100);
   expect(first.equipment[0].baseStats[0].value).toMatchObject({
     status: 'MANUAL_CONFIRMED',
     value: 0,

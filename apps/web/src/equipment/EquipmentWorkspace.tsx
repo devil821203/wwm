@@ -435,6 +435,7 @@ function EquipmentEditor({
       const assembled = applyManualRows(
         {
           ...draft,
+          equipmentLevel: draft.equipmentLevel ?? 100,
           definitionId: identified?.id ?? draft.definitionId,
           slotId: identified?.slotId ?? draft.slotId,
           tierId: identified?.tierId ?? draft.tierId,
@@ -631,6 +632,22 @@ function EquipmentEditor({
             ...previous,
             name: remember('name', event.target.value),
             definitionId: undefined,
+          }))
+        }
+        disabled={busy}
+      />
+      <label htmlFor="equipment-level">裝備等級</label>
+      <input
+        id="equipment-level"
+        type="number"
+        min="1"
+        step="1"
+        required
+        value={draft.equipmentLevel ?? 100}
+        onChange={(event) =>
+          setDraft((previous) => ({
+            ...previous,
+            equipmentLevel: event.target.valueAsNumber,
           }))
         }
         disabled={busy}

@@ -23,6 +23,7 @@ export function emptyEquipment(): EquipmentInstance {
   return {
     id: crypto.randomUUID(),
     name: '新裝備草稿',
+    equipmentLevel: 100,
     gameVersionId: null,
     tierId: null,
     quality: null,

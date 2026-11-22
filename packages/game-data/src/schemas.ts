@@ -479,6 +479,7 @@ export const EquipmentInstanceSchema = z
     ...entityBase,
     gameVersionId: IdSchema.nullable(),
     name: z.string().trim().min(1).max(100).optional(),
+    equipmentLevel: Level.optional(),
     createdAt: Timestamp.optional(),
     updatedAt: Timestamp.optional(),
     imageIds: z.array(IdSchema).optional(),
