@@ -805,6 +805,33 @@ function EquipmentEditor({
     </form>
   );
 }
+// Names observed in the user's screenshot drafts; these are labels, not game values.
+const draftAffixNames = [
+  '最大外功攻擊',
+  '最小外功攻擊',
+  '最大鳴金攻擊',
+  '最大無相攻擊',
+  '全武學增效',
+  '劍武學增傷',
+  '外功穿透',
+  '會心率',
+  '會意率',
+  '精準率',
+  '勢',
+  '勁',
+  '[轉]勢',
+  '[轉]勁',
+  '[轉]最大外功攻擊',
+  '對首領單位增傷',
+  '無名劍法・蓄力技增傷',
+  '弓箭弱點傷害提升',
+  '弓箭拉弓速度提升',
+  '箭矢飛行速度增加',
+  '停淵止水單位消耗減少',
+  '停淵止水降速比例增加',
+  '弓箭基礎傷害提升',
+  '箭矢最大飛行時長增加',
+];
 function ManualRows({
   title,
   rows,
@@ -822,6 +849,13 @@ function ManualRows({
   kind: 'base' | 'affix';
   chengYin?: boolean;
 }) {
+  const [customRows, setCustomRows] = useState<string[]>([]);
+  const choices = [
+    ...new Set([
+      ...(release?.affixes.map((item) => item.name) ?? []),
+      ...draftAffixNames,
+    ]),
+  ];
   const update = (key: string, change: Partial<ManualRow>) =>
     setRows((previous) =>
       previous.map((row) => (row.key === key ? { ...row, ...change } : row)),
@@ -837,27 +871,90 @@ function ManualRows({
           <label htmlFor={row.key + '-name'}>
             {title}名稱 {index + 1}
           </label>
-          <input
-            id={row.key + '-name'}
-            value={row.label}
-            required
-            maxLength={100}
-            onChange={(event) => {
-              const label = event.target.value;
-              const definitions =
-                kind === 'base' ? release?.stats : release?.affixes;
-              const match = definitions?.filter((def) => def.name === label);
-              update(row.key, {
-                label,
-                id:
-                  match?.length === 1
-                    ? match[0].id
-                    : 'manual-' + crypto.randomUUID(),
-                original: undefined,
-                confirmed: false,
-              });
-            }}
-          />
+          {kind === 'affix' ? (
+            (() => {
+              const custom =
+                customRows.includes(row.key) ||
+                (!!row.label && !choices.includes(row.label));
+              const selected = custom ? '__custom' : row.label;
+              const setLabel = (label: string) => {
+                const matches = release?.affixes.filter(
+                  (def) => def.name === label,
+                );
+                update(row.key, {
+                  label,
+                  id:
+                    matches?.length === 1
+                      ? matches[0].id
+                      : 'manual-' + crypto.randomUUID(),
+                  original: undefined,
+                  confirmed: false,
+                });
+              };
+              return (
+                <>
+                  <select
+                    id={row.key + '-name'}
+                    value={selected}
+                    required
+                    onChange={(event) => {
+                      const value = event.target.value;
+                      setCustomRows((previous) =>
+                        value === '__custom'
+                          ? [...new Set([...previous, row.key])]
+                          : previous.filter((key) => key !== row.key),
+                      );
+                      setLabel(value === '__custom' ? '' : value);
+                    }}
+                  >
+                    <option value="">請選擇詞條</option>
+                    {choices.map((name) => (
+                      <option key={name} value={name}>
+                        {name}
+                      </option>
+                    ))}
+                    <option value="__custom">其他（手動輸入）</option>
+                  </select>
+                  {custom && (
+                    <>
+                      <label htmlFor={row.key + '-custom'}>
+                        手動輸入詞條名稱 {index + 1}
+                      </label>
+                      <input
+                        id={row.key + '-custom'}
+                        value={row.label}
+                        required
+                        maxLength={100}
+                        onChange={(event) => setLabel(event.target.value)}
+                      />
+                    </>
+                  )}
+                </>
+              );
+            })()
+          ) : (
+            <input
+              id={row.key + '-name'}
+              value={row.label}
+              required
+              maxLength={100}
+              onChange={(event) => {
+                const label = event.target.value;
+                const match = release?.stats.filter(
+                  (def) => def.name === label,
+                );
+                update(row.key, {
+                  label,
+                  id:
+                    match?.length === 1
+                      ? match[0].id
+                      : 'manual-' + crypto.randomUUID(),
+                  original: undefined,
+                  confirmed: false,
+                });
+              }}
+            />
+          )}
           <label htmlFor={row.key + '-value'}>
             {title}數值 {index + 1}（原單位）
           </label>

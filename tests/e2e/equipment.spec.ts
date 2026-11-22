@@ -20,7 +20,8 @@ test('無截圖也能手動校對並保存未知版本裝備', async ({ page }) 
   await page.getByLabel('基礎屬性數值 1（原單位）').fill('0');
   await page.getByRole('checkbox', { name: '已確認基礎屬性 1' }).check();
   await page.getByRole('button', { name: '新增既有詞條', exact: true }).click();
-  await page.getByLabel('既有詞條名稱 1').fill('測試詞條');
+  await page.getByLabel('既有詞條名稱 1').selectOption('其他（手動輸入）');
+  await page.getByLabel('手動輸入詞條名稱 1').fill('測試詞條');
   await page.getByLabel('既有詞條數值 1（原單位）').fill('12.345');
   await page.getByRole('button', { name: '確認並儲存裝備' }).click();
   await expect(page.getByRole('status')).toHaveText(
@@ -121,4 +122,30 @@ test('截圖本機預覽須同意才保存，備份可還原原圖', async ({ pa
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+});
+
+test('詞條下拉選擇保留數值，切換名稱後須重新核對', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: '裝備庫', exact: true }).click();
+  await page.getByLabel('裝備名稱（玩家標籤）').fill('詞條下拉測試');
+  await page.getByRole('button', { name: '新增既有詞條', exact: true }).click();
+  await page.getByLabel('既有詞條名稱 1').selectOption('最大外功攻擊');
+  await page.getByLabel('既有詞條數值 1（原單位）').fill('73.1');
+  await page.getByRole('checkbox', { name: '已確認既有詞條 1' }).check();
+  await page.getByLabel('既有詞條名稱 1').selectOption('會意率');
+  await expect(
+    page.getByRole('checkbox', { name: '已確認既有詞條 1' }),
+  ).not.toBeChecked();
+  await expect(page.getByLabel('既有詞條數值 1（原單位）')).toHaveValue('73.1');
+  await page.getByRole('button', { name: '確認並儲存裝備' }).click();
+  await expect(page.getByRole('status')).toHaveText(
+    '裝備已儲存，尚未完成合法值驗證。',
+  );
+  const archive = await backup(page);
+  expect(archive.equipment[0].affixes[0].observation).toMatchObject({
+    rawName: '會意率',
+    value: 73.1,
+    manuallyConfirmed: false,
+  });
+  expect(archive.equipment[0].affixes[0].current.status).toBe('UNKNOWN');
 });
