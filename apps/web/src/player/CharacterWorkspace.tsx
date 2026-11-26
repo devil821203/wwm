@@ -301,6 +301,7 @@ export default function CharacterWorkspace() {
               key={selectedBuild.id + selectedBuild.updatedAt}
               build={selectedBuild}
               busy={busy}
+              equipment={data.equipment}
               character={selected}
               release={data.dataReleases.find(
                 (item) => item.version.id === selected.gameVersionId,
@@ -501,11 +502,13 @@ function BuildEditor({
   onDelete,
   character,
   release,
+  equipment,
 }: {
   build: Build;
   busy: boolean;
   character: Character;
   release?: GameDataRelease;
+  equipment: import('@wwm/game-data').EquipmentInstance[];
   onSave: (build: Build) => Promise<boolean>;
   onCopy: () => void;
   onDelete: () => void;
@@ -515,6 +518,14 @@ function BuildEditor({
   const [notes, setNotes] = useState(build.notes);
   const [stats, setStats] = useState(build.stats);
   const [martialArts, setMartialArts] = useState(build.martialArts);
+  const [equipmentIds, setEquipmentIds] = useState(build.equipmentIds);
+  const [recordedPanel, setRecordedPanel] = useState(build.recordedPanel ?? []);
+  const [recordedInnerWays, setRecordedInnerWays] = useState(
+    (build.recordedInnerWays ?? []).join('\n'),
+  );
+  const [panelLabel, setPanelLabel] = useState('');
+  const [panelValue, setPanelValue] = useState('');
+  const [panelUnit, setPanelUnit] = useState('');
   const [statId, setStatId] = useState('');
   const [statInput, setStatInput] = useState('');
   const [artId, setArtId] = useState('');
@@ -530,7 +541,20 @@ function BuildEditor({
       className="panel"
       onSubmit={(event) => {
         event.preventDefault();
-        onSave({ ...build, name, panelMode: mode, notes, stats, martialArts });
+        onSave({
+          ...build,
+          name,
+          panelMode: mode,
+          notes,
+          stats,
+          martialArts,
+          equipmentIds,
+          recordedPanel,
+          recordedInnerWays: recordedInnerWays
+            .split(/\r?\n/)
+            .map((value) => value.trim())
+            .filter(Boolean),
+        });
       }}
     >
       <label htmlFor="build-name">配置名稱</label>
@@ -563,6 +587,130 @@ function BuildEditor({
         onChange={(event) => setNotes(event.target.value)}
         disabled={busy}
       />
+      <fieldset disabled={busy}>
+        <legend>目前裝備</legend>
+        {equipment.length === 0 ? (
+          <p>裝備庫尚無裝備，請先新增或匯入。</p>
+        ) : (
+          equipment.map((item) => (
+            <label className="check-label" key={item.id}>
+              <input
+                type="checkbox"
+                checked={equipmentIds.includes(item.id)}
+                onChange={(event) => {
+                  const checked = event.target.checked;
+                  setEquipmentIds((previous) => {
+                    const remaining = previous.filter((id) => {
+                      if (id === item.id) return false;
+                      const selected = equipment.find(
+                        (entry) => entry.id === id,
+                      );
+                      return (
+                        !checked ||
+                        !item.slotId ||
+                        selected?.slotId !== item.slotId
+                      );
+                    });
+                    return checked ? [...remaining, item.id] : remaining;
+                  });
+                }}
+              />
+              {item.name ?? '未命名裝備'}
+              {item.slotId ? ` · ${item.slotId}` : ' · 部位未確認'}
+            </label>
+          ))
+        )}
+      </fieldset>
+      <fieldset disabled={busy}>
+        <legend>裝備心法</legend>
+        <label htmlFor="recorded-inner-ways">心法名稱（每行一個）</label>
+        <textarea
+          id="recorded-inner-ways"
+          rows={4}
+          value={recordedInnerWays}
+          onChange={(event) => setRecordedInnerWays(event.target.value)}
+          placeholder="例如：易水歌"
+        />
+        <p className="field-note">
+          記錄目前使用的心法；名稱與等級尚未連結傷害計算。
+        </p>
+      </fieldset>
+      <fieldset disabled={busy}>
+        <legend>人物面板紀錄</legend>
+        <label htmlFor="recorded-panel-label">面板項目名稱</label>
+        <input
+          id="recorded-panel-label"
+          maxLength={100}
+          value={panelLabel}
+          onChange={(event) => setPanelLabel(event.target.value)}
+          placeholder="例如：會心率（實算）"
+        />
+        <label htmlFor="recorded-panel-value">面板項目數值</label>
+        <input
+          id="recorded-panel-value"
+          type="number"
+          step="any"
+          value={panelValue}
+          onChange={(event) => setPanelValue(event.target.value)}
+        />
+        <label htmlFor="recorded-panel-unit">面板項目單位</label>
+        <select
+          id="recorded-panel-unit"
+          value={panelUnit}
+          onChange={(event) => setPanelUnit(event.target.value)}
+        >
+          <option value="">數值</option>
+          <option value="%">%</option>
+        </select>
+        <button
+          className="secondary-button"
+          type="button"
+          disabled={!panelLabel.trim() || !panelValue.trim()}
+          onClick={() => {
+            const value = Number(panelValue);
+            if (!Number.isFinite(value)) {
+              setFieldError('請輸入有限的面板數值。');
+              return;
+            }
+            setRecordedPanel((previous) => [
+              ...previous,
+              {
+                id: crypto.randomUUID(),
+                label: panelLabel.trim(),
+                value,
+                unit: panelUnit,
+              },
+            ]);
+            setPanelLabel('');
+            setPanelValue('');
+            setFieldError('');
+          }}
+        >
+          新增面板紀錄
+        </button>
+        <ul>
+          {recordedPanel.map((item) => (
+            <li key={item.id}>
+              {item.label}：{item.value}
+              {item.unit}{' '}
+              <button
+                type="button"
+                className="text-button"
+                onClick={() =>
+                  setRecordedPanel((previous) =>
+                    previous.filter((entry) => entry.id !== item.id),
+                  )
+                }
+              >
+                移除面板 {item.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+        <p className="field-note">
+          這些是使用者記錄的面板資料；總數值與括號內實算值請分別記錄，尚未連結傷害計算。
+        </p>
+      </fieldset>
       <fieldset disabled={busy || !release}>
         <legend>面板屬性</legend>
         <label htmlFor="stat-id">面板屬性項目</label>
@@ -726,19 +874,20 @@ function BuildEditor({
       )}
       <dl className="build-summary">
         <dt>裝備</dt>
-        <dd>{build.equipmentIds.length} 件</dd>
+        <dd>{equipmentIds.length} 件</dd>
         <dt>武學／心法／奇術／天賦</dt>
         <dd>
           {[
             martialArts.length,
-            build.innerWays.length,
+            recordedInnerWays.split(/\r?\n/).filter((value) => value.trim())
+              .length,
             build.mysticSkillIds.length,
             build.talentIds.length,
           ].join(' / ')}
         </dd>
       </dl>
       <p className="field-note">
-        裝備可於「裝備庫」編輯並加入配置；心法、奇術與天賦保留備份資料，待版本定義完備再開放選項。
+        裝備、心法與面板紀錄會隨配置儲存；請在裝備庫編輯裝備內容。
       </p>
       <div className="toolbar">
         <button

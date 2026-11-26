@@ -27,6 +27,21 @@ export const BuildSchema = z.strictObject({
   stats: z.array(
     z.strictObject({ statId: IdSchema, value: ResolvedValueSchema }),
   ),
+  recordedPanel: z
+    .array(
+      z.strictObject({
+        id: IdSchema,
+        label: z.string().trim().min(1).max(100),
+        value: z.number().finite(),
+        unit: z.string().max(20),
+      }),
+    )
+    .max(100)
+    .optional(),
+  recordedInnerWays: z
+    .array(z.string().trim().min(1).max(100))
+    .max(20)
+    .optional(),
   equipmentIds: z.array(IdSchema),
   martialArts: z.array(
     z.strictObject({
