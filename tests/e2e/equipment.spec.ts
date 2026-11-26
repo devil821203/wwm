@@ -28,6 +28,14 @@ test('無截圖也能手動校對並保存未知版本裝備', async ({ page }) 
   await expect(page.getByRole('status')).toHaveText(
     '裝備已儲存，尚未完成合法值驗證。',
   );
+  await expect(
+    page.getByRole('button', { name: /人工測試裝備.*手動/ }),
+  ).toContainText('12.345');
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
   const first = await backup(page);
   expect(first.equipment[0].gameVersionId).toBeNull();
   expect(first.equipment[0].equipmentLevel).toBe(100);

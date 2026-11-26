@@ -80,9 +80,7 @@ test('生成滿值、共用編輯器入庫、配裝送模擬及備份稽核', as
   await expect(page.getByRole('status')).toHaveText(
     '裝備已儲存，已通過版本規則驗證。',
   );
-  await page
-    .getByLabel('加入同版本配置（待驗證）')
-    .selectOption('generator-build');
+  await page.getByLabel('加入配置（待驗證）').selectOption('generator-build');
   await page.getByRole('button', { name: '加入配置', exact: true }).click();
   await page.getByRole('button', { name: '以此配置前往模擬中心' }).click();
   await expect(page.getByLabel('模擬配置')).toHaveValue('generator-build');

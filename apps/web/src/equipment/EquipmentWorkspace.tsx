@@ -1,4 +1,5 @@
 import EquipmentWorkshop from './EquipmentWorkshop';
+import EquipmentCards from './EquipmentCards';
 import EquipmentRulesPanel from './EquipmentRulesPanel';
 import { addOcrCandidate } from './ocr/merge';
 import { lazy, Suspense, useRef, useState, type FormEvent } from 'react';
@@ -130,46 +131,27 @@ export default function EquipmentWorkspace({
         />
       )}
       {data && (
+        <EquipmentCards
+          equipment={data.equipment}
+          images={data.equipmentImages ?? []}
+          builds={data.builds}
+          releases={data.dataReleases}
+          selectedId={expected?.id}
+          onOpen={(item) =>
+            open(
+              item,
+              (data.equipmentImages ?? []).filter(
+                (image) => image.equipmentId === item.id,
+              ),
+              true,
+            )
+          }
+        />
+      )}
+      {data && (
         <div className="equipment-layout">
-          <aside className="panel">
-            <h2>所有裝備（{data.equipment.length}）</h2>
-            {!data.equipment.length && (
-              <p className="muted">
-                裝備庫尚無資料，也可以直接從右側建立草稿。
-              </p>
-            )}
-            <ul className="inventory-list">
-              {data.equipment.map((item) => (
-                <li key={item.id}>
-                  <button
-                    className="character-item"
-                    aria-pressed={expected?.id === item.id}
-                    onClick={() =>
-                      open(
-                        item,
-                        (data.equipmentImages ?? []).filter(
-                          (image) => image.equipmentId === item.id,
-                        ),
-                        true,
-                      )
-                    }
-                  >
-                    <strong>{item.name ?? '未命名裝備'}</strong>
-                    <span>
-                      {item.creationMethod === 'SCREENSHOT'
-                        ? '截圖'
-                        : item.creationMethod === 'GENERATED'
-                          ? '生成'
-                          : '手動'}{' '}
-                      ·{' '}
-                      {item.validation.status === 'VALID'
-                        ? '已通過儲存時規則驗證'
-                        : '尚未驗證'}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
+          <aside className="panel equipment-actions">
+            <h2>裝備操作</h2>
             {expected && (
               <>
                 <div className="toolbar">
@@ -214,9 +196,7 @@ export default function EquipmentWorkspace({
                     刪除裝備
                   </button>
                 </div>
-                <label htmlFor="equipment-build">
-                  加入同版本配置（待驗證）
-                </label>
+                <label htmlFor="equipment-build">加入配置（待驗證）</label>
                 <select
                   id="equipment-build"
                   value={buildId}
@@ -237,12 +217,7 @@ export default function EquipmentWorkspace({
                 </select>
                 <button
                   className="secondary-button"
-                  disabled={
-                    busy ||
-                    !buildId ||
-                    !expected.slotId ||
-                    expected.gameVersionId === null
-                  }
+                  disabled={busy || !buildId || !expected.slotId}
                   onClick={() =>
                     action(async () => {
                       await playerRepository.assignEquipment(
@@ -268,7 +243,7 @@ export default function EquipmentWorkspace({
                     </button>
                   )}
                 <p className="field-note">
-                  版本及部位確認後才可配裝；同部位會替換既有引用，原裝備保留在庫中。
+                  部位確認後才可配裝；同部位會替換既有引用，原裝備保留在庫中。
                 </p>
                 {data.builds
                   .filter((build) => build.equipmentIds.includes(expected.id))
