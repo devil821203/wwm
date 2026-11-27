@@ -506,3 +506,7 @@ Windows Node 22.14.0、pnpm 10.6.5：Web typecheck、受影響 ESLint、build �
 ## 2026-11-28 試算頁配置選擇
 
 Windows Node 22.14.0、pnpm 10.6.5：Web typecheck、受影響 ESLint、pnpm build 通過；pnpm --filter @wwm/web exec vitest run src/preview/SplendorPreview.test.tsx 1 項通過，確認切換兩個配置不沿用舊面板或固定 DPS；pnpm exec playwright test tests/e2e/splendor-preview.spec.ts 桌面／手機 2 項通過。未執行全專案測試或驗證真實遊戲 DPS；輸出在執行終端，無獨立日誌。
+
+## 2026-11-28 鳴金虹參考軸傷害
+
+Windows Node 22.14.0、pnpm 10.6.5：pnpm --filter @wwm/web exec vitest run src/player/splendor-reference.test.ts src/player/recorded-mapping.test.ts src/player/CharacterWorkspace.test.tsx src/preview/SplendorPreview.test.tsx 8 項通過；來源模型三組同輸入總傷害分別 3101002、3262453、3026856，新模型與其相符；修改後模型測試重跑 2 項通過。受影響 ESLint、Web typecheck、build 通過；pnpm exec playwright test tests/e2e/splendor-preview.spec.ts 桌面／手機 2 項通過。未跑全專案測試，輸出於執行終端；來源模型本身未經遊戲實測校準。

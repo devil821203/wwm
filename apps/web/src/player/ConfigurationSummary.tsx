@@ -3,6 +3,7 @@ import type { Build, Character, PlayerArchive } from '@wwm/game-data';
 import baseline from '../../../../data/staging/external-comparison-2026-11-27/character.json';
 import { SimulationPanel } from '../simulation/SimulationWorkspace';
 import { mapRecordedConfiguration } from './recorded-mapping';
+import { calculateSplendorReference } from './splendor-reference';
 import splendorRotation from '../../../../data/staging/external-comparison-2026-11-27/splendor-rotation.json';
 
 export function ConfigurationSummary({
@@ -18,6 +19,10 @@ export function ConfigurationSummary({
     (entry) => entry.version.id === character.gameVersionId,
   );
   const mapped = mapRecordedConfiguration(build);
+  const reference =
+    character.pathId === 'bellstrike_splendor'
+      ? calculateSplendorReference(build)
+      : null;
   const unsupportedManual =
     (build.recordedPanel?.length ?? 0) > 0 ||
     (build.recordedInnerWays?.length ?? 0) > 0;
@@ -189,6 +194,43 @@ export function ConfigurationSummary({
           查看參考資料來源
         </a>
       </details>
+      {reference && (
+        <section aria-label="鳴金虹參考傷害試算">
+          <h3>55 秒參考軸預估傷害</h3>
+          {reference.dps === null ? (
+            <>
+              <p>無法計算</p>
+              <ul>
+                {reference.issues.map((issue, index) => (
+                  <li key={`${issue}-${index}`}>{issue}</li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <>
+              <p>
+                包含預估資料：
+                <output aria-label="參考軸預估 DPS">
+                  {new Intl.NumberFormat('zh-TW', {
+                    maximumFractionDigits: 2,
+                  }).format(reference.dps)}
+                </output>{' '}
+                DPS
+              </p>
+              <p>
+                預估總傷害：
+                {new Intl.NumberFormat('zh-TW', {
+                  maximumFractionDigits: 2,
+                }).format(reference.totalDamage!)}
+              </p>
+            </>
+          )}
+          <p className="field-note">
+            使用社群固定技能次數與公式（敵方防禦 498、固定傷害加成
+            7.25%）；預設不啟用套裝四件效果，不重新加裝備或心法面板。僅計算鳴金及無相；更換裝備後須更新已含裝備的面板。需逐項輸入完整面板，缺少的數值不視為零；該結果未經遊戲實測校準，亦非逐事件模擬。
+          </p>
+        </section>
+      )}
       <h3>期望 DPS</h3>
       {missing.length ? (
         <>
