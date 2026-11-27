@@ -478,3 +478,7 @@ Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、
 ## 2026-11-27 資料來源／機體版本契約
 
 Windows，Node.js 22.14.0、pnpm 10.6.5。pnpm --filter @wwm/game-data test：176 通過（含新增 5 項）；pnpm --filter @wwm/game-data typecheck、pnpm --filter @wwm/game-data build：通過；pnpm exec eslint packages/game-data/src/version-contracts.ts packages/game-data/src/version-contracts.test.ts：首次未使用變數失敗，修正後通過，相關測試重跑通過。測試輸出於執行終端；未產生日誌檔。未執行 E2E 或全專案測試。
+
+## 2026-11-27 機體快照接入
+
+Windows、Node.js 22.14.0、pnpm 10.6.5；pnpm test 通過（資料 176、數值 48、戰鬥 40、最佳化 9、Web 80）；pnpm typecheck、pnpm lint、pnpm build 通過；pnpm exec playwright test tests/e2e/characters.spec.ts 桌面／手機共 8 項通過，包含保存、重載及備份匯入。pnpm format:check 首次因 E2E 檔格式失敗，格式化後重跑通過。輸出見執行終端，未另存日誌；未執行其他 E2E。

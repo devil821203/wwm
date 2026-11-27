@@ -151,3 +151,53 @@ describe('JSON backup and atomic merge', () => {
     expect((await repository.snapshot()).characters).toHaveLength(1);
   });
 });
+
+describe('loadout snapshot persistence and backup', () => {
+  it('preserves a saved revision after editing and restores it from backup', async () => {
+    const id = await repository.createCharacter(input);
+    const build = (await repository.snapshot()).builds[0];
+    const snapshotId = await repository.createLoadoutSnapshot(id, build.id);
+    await repository.updateBuild({ ...build, notes: '新資料' });
+    const saved = (await repository.listLoadoutSnapshots(id))[0];
+    expect(saved.id).toBe(snapshotId);
+    expect(saved.archive.builds[0].notes).toBe('');
+    db.close();
+    db = new PlayerDatabase(db.name);
+    repository = new PlayerRepository(db);
+    expect(await repository.listLoadoutSnapshots(id)).toHaveLength(1);
+    const other = new PlayerDatabase('wwm-snapshot-' + crypto.randomUUID());
+    try {
+      const target = new PlayerRepository(other);
+      await target.importJson(await repository.exportJson());
+      expect(
+        (await target.listLoadoutSnapshots(id))[0].archive.builds[0].notes,
+      ).toBe('');
+      expect((await target.snapshot()).builds[0].notes).toBe('新資料');
+    } finally {
+      await other.delete();
+    }
+  });
+  it('rejects a conflicting snapshot atomically, including new characters', async () => {
+    const id = await repository.createCharacter(input);
+    const build = (await repository.snapshot()).builds[0];
+    await repository.createLoadoutSnapshot(id, build.id);
+    const backup = JSON.parse(await repository.exportJson());
+    backup.archive.characters.push({
+      ...backup.archive.characters[0],
+      id: 'new-character',
+    });
+    backup.snapshots[0].origin = 'IMPORT';
+    await expect(repository.importJson(backup)).rejects.toThrow('ID 衝突');
+    expect((await repository.snapshot()).characters).toHaveLength(1);
+    expect((await repository.listLoadoutSnapshots(id))[0].origin).toBe(
+      'MANUAL',
+    );
+  });
+  it('refuses a snapshot for another or missing build', async () => {
+    const id = await repository.createCharacter(input);
+    await expect(
+      repository.createLoadoutSnapshot(id, 'missing'),
+    ).rejects.toThrow();
+    expect(await repository.listLoadoutSnapshots(id)).toHaveLength(0);
+  });
+});

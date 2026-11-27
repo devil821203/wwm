@@ -203,3 +203,37 @@ test('匯入版本只列合法等級，手動面板零值可保存', async ({ pa
   await expect(page.getByText('測試屬性：0（手動輸入）')).toBeVisible();
   await expect(page.getByText('測試武學：3（手動輸入）')).toBeVisible();
 });
+
+test('機體快照保存並隨備份還原', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: '角色與配置', exact: true }).click();
+  await page.getByLabel('角色名稱').fill('快照角色');
+  await page.getByRole('button', { name: '建立角色', exact: true }).click();
+  await expect(page.getByRole('status')).toHaveText('角色已建立。');
+  await page.getByRole('button', { name: '保存機體快照' }).click();
+  await expect(page.getByRole('status')).toHaveText('機體快照已保存。');
+  await page.reload();
+  await page.getByRole('button', { name: '角色與配置', exact: true }).click();
+  await expect(
+    page.getByRole('region', { name: '機體快照' }).getByText(/預設配置/),
+  ).toBeVisible();
+  const downloading = page.waitForEvent('download');
+  await page.getByRole('button', { name: '下載 JSON 備份' }).click();
+  const download = await downloading;
+  const backup = await readFile((await download.path())!, 'utf8');
+  const saved = JSON.parse(backup);
+  expect(saved.format).toBe('WWM_PLAYER_BACKUP');
+  expect(saved.snapshots).toHaveLength(1);
+  page.once('dialog', (dialog) => dialog.accept());
+  await page.getByRole('button', { name: '刪除角色', exact: true }).click();
+  await page.getByLabel('匯入玩家備份').setInputFiles({
+    name: 'backup.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(backup),
+  });
+  await page.getByRole('button', { name: '匯入已檢查備份' }).click();
+  await expect(page.getByRole('status')).toHaveText('備份已匯入。');
+  await expect(
+    page.getByRole('region', { name: '機體快照' }).getByText(/預設配置/),
+  ).toBeVisible();
+});

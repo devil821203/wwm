@@ -197,3 +197,5 @@ Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、
 
 Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 全通過；單元與整合 345 項（171／48／40／9／77），桌面與手機 E2E 48 項。角色 E2E 實際建立裝備及角色、記錄四心法與面板值、保存複製及匯出還原。日誌 management/tests/logs/character-loadout-2026-11-27-000940/。此前裝備生成、狀態互斥、自動帶值及傷害版本解析仍待完成。
 - 2026-11-27：新增來源四模組 manifest、玩家機體快照與計算引用資料契約；僅 schema，尚未接入持久化或計算。
+
+- 2026-11-27：角色頁新增機體快照手動保存與清單；快照納入本機備份及交易式匯入。

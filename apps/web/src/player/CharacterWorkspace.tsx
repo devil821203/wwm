@@ -1,14 +1,14 @@
-import { useRef, useState, type FormEvent } from 'react';
+﻿import { useRef, useState, type FormEvent } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import {
-  parsePlayerArchive,
+  parsePlayerBackup,
   pathCatalog,
   pathCoverage,
   valueStatusLabel,
   type Build,
   type Character,
   type GameDataRelease,
-  type PlayerArchive,
+  type PlayerBackup,
 } from '@wwm/game-data';
 import { playerRepository } from './database';
 
@@ -43,7 +43,7 @@ export default function CharacterWorkspace() {
   const [notice, setNotice] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
-  const [preview, setPreview] = useState<PlayerArchive | null>(null);
+  const [preview, setPreview] = useState<PlayerBackup | null>(null);
   const upload = useRef<HTMLInputElement>(null);
   const data = result?.data;
   const selected =
@@ -54,6 +54,14 @@ export default function CharacterWorkspace() {
     data?.builds.filter((item) => item.characterId === selected?.id) ?? [];
   const selectedBuild =
     builds.find((item) => item.id === selectedBuildId) ?? builds[0] ?? null;
+  const snapshots =
+    useLiveQuery(
+      () =>
+        selected
+          ? playerRepository.listLoadoutSnapshots(selected.id)
+          : Promise.resolve([]),
+      [selected?.id],
+    ) ?? [];
   async function action(operation: () => Promise<void>, message: string) {
     if (busy) return false;
     setBusy(true);
@@ -125,7 +133,7 @@ export default function CharacterWorkspace() {
             setError('');
             if (!file) return;
             try {
-              setPreview(parsePlayerArchive(await file.text()));
+              setPreview(parsePlayerBackup(await file.text()));
             } catch (reason) {
               setError(messageFor(reason));
               return false;
@@ -146,9 +154,11 @@ export default function CharacterWorkspace() {
         <aside className="import-preview">
           <h2>備份預覽</h2>
           <p>
-            {preview.characters.length} 位角色、{preview.builds.length} 個配置、
-            {preview.equipment.length} 件裝備、{preview.overrides.length}{' '}
-            筆覆寫。
+            {preview.archive.characters.length} 位角色、
+            {preview.archive.builds.length} 個配置、
+            {preview.archive.equipment.length} 件裝備、
+            {preview.archive.overrides.length} 筆覆寫、
+            {preview.snapshots.length} 個機體快照。
           </p>
           <p>將合併至本機。相同 ID 若內容不同會拒絕整批，不覆蓋現有資料。</p>
           <button
@@ -296,6 +306,42 @@ export default function CharacterWorkspace() {
               </button>
             ))}
           </div>
+          {selectedBuild && (
+            <section aria-label="機體快照">
+              <h3>機體快照</h3>
+              <p className="field-note">
+                保存目前已儲存的角色與配置；快照保留當時裝備、心法、面板及證據，不會隨後續編輯改變。
+              </p>
+              <button
+                className="secondary-button"
+                disabled={busy}
+                onClick={() =>
+                  action(async () => {
+                    await playerRepository.createLoadoutSnapshot(
+                      selected.id,
+                      selectedBuild.id,
+                    );
+                  }, '機體快照已保存。')
+                }
+              >
+                保存機體快照
+              </button>
+              {snapshots.length === 0 ? (
+                <p className="muted">尚無機體快照。</p>
+              ) : (
+                <ul>
+                  {snapshots.map((snapshot) => (
+                    <li key={snapshot.id}>
+                      {new Date(snapshot.capturedAt).toLocaleString()} ·{' '}
+                      {snapshot.archive.builds.find(
+                        (build) => build.id === snapshot.buildId,
+                      )?.name ?? snapshot.buildId}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          )}
           {selectedBuild ? (
             <BuildEditor
               key={selectedBuild.id + selectedBuild.updatedAt}

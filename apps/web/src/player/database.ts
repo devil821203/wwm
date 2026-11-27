@@ -1,4 +1,4 @@
-import type { OptimizationRequest } from '@wwm/optimizer';
+﻿import type { OptimizationRequest } from '@wwm/optimizer';
 import { Dexie, type Table } from 'dexie';
 import {
   BuildSchema,
@@ -10,7 +10,10 @@ import {
   PlayerArchiveSchema,
   canonicalJson,
   resolveEquipment,
-  parsePlayerArchive,
+  parsePlayerBackup,
+  PlayerBackupSchema,
+  PlayerLoadoutSnapshotSchema,
+  type PlayerLoadoutSnapshot,
   type Build,
   type Character,
   type EquipmentInstance,
@@ -30,6 +33,7 @@ export class PlayerDatabase extends Dexie {
   equipment!: Table<EquipmentInstance, string>;
   overrides!: Table<InstanceOverride, string>;
   dataReleases!: Table<GameDataRelease, string>;
+  loadoutSnapshots!: Table<PlayerLoadoutSnapshot, string>;
 
   constructor(name = 'wwm-player-v1') {
     super(name);
@@ -45,6 +49,9 @@ export class PlayerDatabase extends Dexie {
       equipmentHistory: '&id, equipmentId',
     });
     this.version(3).stores({ measurements: '&id, kind, recordedAt' });
+    this.version(4).stores({
+      loadoutSnapshots: '&id, characterId, buildId, capturedAt',
+    });
   }
 }
 
@@ -60,6 +67,7 @@ export class PlayerRepository {
       this.db.equipmentImages,
       this.db.equipmentHistory,
       this.db.measurements,
+      this.db.loadoutSnapshots,
     ];
   }
   private async read(): Promise<PlayerArchive> {
@@ -529,48 +537,99 @@ export class PlayerRepository {
       );
     });
   }
+  async listLoadoutSnapshots(characterId: string) {
+    return this.db.loadoutSnapshots
+      .where('characterId')
+      .equals(characterId)
+      .reverse()
+      .sortBy('capturedAt');
+  }
+  async createLoadoutSnapshot(characterId: string, buildId: string) {
+    return this.db.transaction('rw', this.tables(), async () => {
+      const archive = await this.read();
+      const snapshot = PlayerLoadoutSnapshotSchema.parse({
+        id: crypto.randomUUID(),
+        capturedAt: new Date().toISOString(),
+        origin: 'MANUAL',
+        claimedGameVersion: null,
+        characterId,
+        buildId,
+        archive,
+      });
+      await this.db.loadoutSnapshots.add(snapshot);
+      return snapshot.id;
+    });
+  }
   async exportJson() {
-    return JSON.stringify(await this.snapshot(), null, 2);
+    return this.db.transaction('r', this.tables(), async () => {
+      const archive = await this.read();
+      const snapshots = await this.db.loadoutSnapshots.toArray();
+      return JSON.stringify(
+        snapshots.length
+          ? PlayerBackupSchema.parse({
+              format: 'WWM_PLAYER_BACKUP',
+              schemaVersion: '1.0.0',
+              archive,
+              snapshots,
+            })
+          : archive,
+        null,
+        2,
+      );
+    });
   }
   async importJson(input: unknown) {
-    const imported = parsePlayerArchive(input);
-    await this.mutate((state) => {
-      const merge = <T>(
-        oldItems: T[],
-        newItems: T[],
-        key: (item: T) => string,
-      ) => {
-        const existing = new Map(oldItems.map((item) => [key(item), item]));
-        for (const item of newItems) {
-          const old = existing.get(key(item));
-          if (old && canonicalJson(old) !== canonicalJson(item))
-            throw new Error('ID 衝突，未匯入任何資料：' + key(item));
-          if (!old) oldItems.push(structuredClone(item));
-        }
-      };
-      state.measurements ??= [];
-      merge(state.measurements, imported.measurements ?? [], (item) => item.id);
-      state.equipmentImages ??= [];
-      state.equipmentHistory ??= [];
-      merge(
-        state.equipmentImages,
-        imported.equipmentImages ?? [],
-        (item) => item.id,
-      );
-      merge(
-        state.equipmentHistory,
-        imported.equipmentHistory ?? [],
-        (item) => item.id,
-      );
-      merge(state.characters, imported.characters, (item) => item.id);
-      merge(state.builds, imported.builds, (item) => item.id);
-      merge(state.equipment, imported.equipment, (item) => item.id);
-      merge(state.overrides, imported.overrides, (item) => item.id);
-      merge(
-        state.dataReleases,
-        imported.dataReleases,
-        (item) => item.version.id,
-      );
+    const backup = parsePlayerBackup(input);
+    const imported = backup.archive;
+    await this.db.transaction('rw', this.tables(), async () => {
+      await this.mutate((state) => {
+        const merge = <T>(
+          oldItems: T[],
+          newItems: T[],
+          key: (item: T) => string,
+        ) => {
+          const existing = new Map(oldItems.map((item) => [key(item), item]));
+          for (const item of newItems) {
+            const old = existing.get(key(item));
+            if (old && canonicalJson(old) !== canonicalJson(item))
+              throw new Error('ID 衝突，未匯入任何資料：' + key(item));
+            if (!old) oldItems.push(structuredClone(item));
+          }
+        };
+        state.measurements ??= [];
+        merge(
+          state.measurements,
+          imported.measurements ?? [],
+          (item) => item.id,
+        );
+        state.equipmentImages ??= [];
+        state.equipmentHistory ??= [];
+        merge(
+          state.equipmentImages,
+          imported.equipmentImages ?? [],
+          (item) => item.id,
+        );
+        merge(
+          state.equipmentHistory,
+          imported.equipmentHistory ?? [],
+          (item) => item.id,
+        );
+        merge(state.characters, imported.characters, (item) => item.id);
+        merge(state.builds, imported.builds, (item) => item.id);
+        merge(state.equipment, imported.equipment, (item) => item.id);
+        merge(state.overrides, imported.overrides, (item) => item.id);
+        merge(
+          state.dataReleases,
+          imported.dataReleases,
+          (item) => item.version.id,
+        );
+      });
+      for (const snapshot of backup.snapshots) {
+        const old = await this.db.loadoutSnapshots.get(snapshot.id);
+        if (old && canonicalJson(old) !== canonicalJson(snapshot))
+          throw new Error('ID 衝突，未匯入任何資料：' + snapshot.id);
+        if (!old) await this.db.loadoutSnapshots.add(snapshot);
+      }
     });
   }
 }

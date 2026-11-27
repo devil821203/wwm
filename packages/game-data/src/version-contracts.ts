@@ -129,3 +129,38 @@ export type PlayerLoadoutSnapshot = z.infer<typeof PlayerLoadoutSnapshotSchema>;
 export type VersionedCalculationReference = z.infer<
   typeof VersionedCalculationReferenceSchema
 >;
+
+/** Envelope keeps historical snapshots outside the embedded legacy archive. */
+export const PlayerBackupSchema = z
+  .strictObject({
+    format: z.literal('WWM_PLAYER_BACKUP'),
+    schemaVersion: z.literal('1.0.0'),
+    archive: PlayerArchiveSchema,
+    snapshots: z.array(PlayerLoadoutSnapshotSchema),
+  })
+  .superRefine((backup, ctx) => {
+    const ids = backup.snapshots.map((snapshot) => snapshot.id);
+    if (new Set(ids).size !== ids.length)
+      ctx.addIssue({
+        code: 'custom',
+        path: ['snapshots'],
+        message: 'Duplicate snapshot ID',
+      });
+  });
+export type PlayerBackup = z.infer<typeof PlayerBackupSchema>;
+export function parsePlayerBackup(input: unknown): PlayerBackup {
+  const data: unknown = typeof input === 'string' ? JSON.parse(input) : input;
+  if (
+    typeof data === 'object' &&
+    data !== null &&
+    'format' in data &&
+    data.format === 'WWM_PLAYER_ARCHIVE'
+  )
+    return PlayerBackupSchema.parse({
+      format: 'WWM_PLAYER_BACKUP',
+      schemaVersion: '1.0.0',
+      archive: data,
+      snapshots: [],
+    });
+  return PlayerBackupSchema.parse(data);
+}
