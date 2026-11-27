@@ -486,3 +486,7 @@ Windows、Node.js 22.14.0、pnpm 10.6.5；pnpm test 通過（資料 176、數值
 ## 2026-11-27 外部與玩家截圖資料初版檢查
 
 Windows Node 22.14.0：以 node 檢查固定來源 items.json 可解析、135 筆及 15 張 PNG、三份報告非空：PASS；git hash-object 為 86775007600543f97289eca7645cc3edbbc334b0，符合來源 blob；Get-FileHash SHA-256 e0992f89acf7f21019ff4d08574dfe87e0bcd7d4eda9837f38a8f1e343ebb88f；git diff --check 通過。三圖人工複看，其餘沿用待核轉寫。來源大檔置系統暫存，不發布；本輪文件整理未執行應用測試，無額外日誌檔。
+
+## 2026-11-27 外部資料分類 JSON 驗證
+
+Windows Node 22.14.0：node 解析四份 JSON，核對 135 件裝備、60 本心法、22 筆武學索引、來源順序與代表值：PASS；逐條對照 135 件所有初始／調律詞條名稱、最大值、承音值：PASS。pnpm exec prettier --check data/staging/external-comparison-2026-11-27/*.json data/staging/external-comparison-2026-11-27/README.md 首次失敗，prettier --write 後重跑通過。未執行程式測試或資料發布 U01–U10；檢查輸出在執行終端，未另存日誌。

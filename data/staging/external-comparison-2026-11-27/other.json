@@ -1,0 +1,221 @@
+{
+  "format": "WWM_EXTERNAL_CANDIDATE",
+  "schemaVersion": "1.0.0",
+  "module": "other",
+  "createdAt": "2026-11-27",
+  "publication": "DRAFT_REVIEW",
+  "sources": [
+    {
+      "id": "where-datas-mine",
+      "commit": "b021a2cac8c1a723e0c2b5c06b8ca29197415010",
+      "url": "https://github.com/greydust/where-datas-mine/tree/b021a2cac8c1a723e0c2b5c06b8ca29197415010/data",
+      "region": "GLOBAL_USER_CONFIRMED",
+      "sourceGameBuild": null,
+      "assumedGameBuild": "1.0.334.64785",
+      "assumption": "USER_SPECIFIED_NOT_SOURCE_VERIFIED",
+      "sourceLicense": "UNVERIFIED",
+      "publication": "DRAFT_REVIEW",
+      "file": "martial-arts.json",
+      "sha256": "73f75d198c74154de4cf10ed32fde3ace02a00562c8bbefb2be2296ef7c521db"
+    },
+    {
+      "id": "aruseito-equipment-simulator",
+      "commit": "7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f",
+      "url": "https://github.com/AruSeito/yysls-equipment-simulator/blob/7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f/src/lib/data/commonData.ts",
+      "sourceGameBuild": null,
+      "region": "UNKNOWN",
+      "assumedGameBuild": "1.0.334.64785",
+      "assumption": "USER_SPECIFIED_NOT_SOURCE_VERIFIED",
+      "sourceLicense": "UNVERIFIED",
+      "publication": "DRAFT_REVIEW"
+    }
+  ],
+  "communitySets": {
+    "玉斗": {
+      "最大外功攻击": 91
+    },
+    "飞隼": {
+      "会意率": 5.2
+    },
+    "时雨": {
+      "精准率": 9.3
+    },
+    "断岳": {
+      "最小外功攻击": 91
+    },
+    "烟柳": {
+      "精准率": 9.3
+    },
+    "浣花": {
+      "会心率": 10.4
+    },
+    "燕归": {
+      "最小外功攻击": 91
+    },
+    "连星": {
+      "最小外功攻击": 91
+    },
+    "撼天": {
+      "最小外功攻击": 91
+    }
+  },
+  "martialArts": [
+    {
+      "sourceIndex": 0,
+      "name": "Strategic Sword",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 1,
+      "name": "Nameless Sword",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 2,
+      "name": "Heavenquaker Spear",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 3,
+      "name": "Nameless Spear",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 4,
+      "name": "Panacea Fan",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 5,
+      "name": "Inkwell Fan",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 6,
+      "name": "Willowbend Fan",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 7,
+      "name": "Stormbreaker Spear",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 8,
+      "name": "Thundercry Blade",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 9,
+      "name": "Phalanxbane Blade",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 10,
+      "name": "Infernal Twinblades",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 11,
+      "name": "Riven Twinblades",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 12,
+      "name": "Vernal Umbrella",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 13,
+      "name": "Soulshade Umbrella",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 14,
+      "name": "Everspring Umbrella",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 15,
+      "name": "Mortal Rope Dart",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 16,
+      "name": "Unfettered Rope Dart",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 17,
+      "name": "Skygrasp Rope Dart",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 18,
+      "name": "Snowparting Blade",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 19,
+      "name": "Heavenwill Gauntlets",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 20,
+      "name": "Skystrike Gauntlets",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    },
+    {
+      "sourceIndex": 21,
+      "name": "Museflow Waist Drum",
+      "tiers": [13, 14],
+      "effects": "SEE_SOURCE",
+      "mappingStatus": "NEEDS_REVIEW"
+    }
+  ],
+  "notes": [
+    "Only indexed martial arts and community set stats; skill coefficients and complete set effects are not established."
+  ]
+}

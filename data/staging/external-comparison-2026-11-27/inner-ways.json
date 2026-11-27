@@ -1,0 +1,3790 @@
+{
+  "format": "WWM_EXTERNAL_CANDIDATE",
+  "schemaVersion": "1.0.0",
+  "module": "innerWays",
+  "createdAt": "2026-11-27",
+  "publication": "DRAFT_REVIEW",
+  "sources": [
+    {
+      "id": "where-datas-mine",
+      "commit": "b021a2cac8c1a723e0c2b5c06b8ca29197415010",
+      "url": "https://github.com/greydust/where-datas-mine/tree/b021a2cac8c1a723e0c2b5c06b8ca29197415010/data",
+      "region": "GLOBAL_USER_CONFIRMED",
+      "sourceGameBuild": null,
+      "assumedGameBuild": "1.0.334.64785",
+      "assumption": "USER_SPECIFIED_NOT_SOURCE_VERIFIED",
+      "sourceLicense": "UNVERIFIED",
+      "publication": "DRAFT_REVIEW",
+      "file": "inner-way.json",
+      "sha256": "c389457726169e354a35269028b7026f32555d7a8ae4e5a8416f5e95b0e0164b",
+      "gitBlob": "0383bb250b40c3f32beaa91c0cebb6992b3ffaa2"
+    },
+    {
+      "id": "aruseito-equipment-simulator",
+      "commit": "7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f",
+      "url": "https://github.com/AruSeito/yysls-equipment-simulator/blob/7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f/src/lib/data/commonData.ts",
+      "sourceGameBuild": null,
+      "region": "UNKNOWN",
+      "assumedGameBuild": "1.0.334.64785",
+      "assumption": "USER_SPECIFIED_NOT_SOURCE_VERIFIED",
+      "sourceLicense": "UNVERIFIED",
+      "publication": "DRAFT_REVIEW"
+    }
+  ],
+  "innerWays": [
+    {
+      "sourceIndex": 0,
+      "name": "Wind Beneath Wings",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2261, 2367, 2553]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 1,
+      "name": "Evening Snow",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2261, 2367, 2553]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 2,
+      "name": "Steadfast Stance",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Defense",
+              "formats": ["1f"],
+              "levels": [29.7, 31.2, 33.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 3,
+      "name": "Shadow Assault",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [59.5, 62.3, 67.2]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 4,
+      "name": "Fivefold Bleed",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max Physical Attack",
+              "formats": ["1f"],
+              "levels": [59.5, 62.3, 67.2]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 5,
+      "name": "Sandswirl Tail",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Defense",
+              "formats": ["1f"],
+              "levels": [29.7, 31.2, 33.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 6,
+      "name": "Envigorated Warrior",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [66.9, 70.1, 75.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 7,
+      "name": "Bitter Seasons",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Precision Rate",
+              "formats": ["1%"],
+              "levels": [0.069, 0.072, 0.078]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 8,
+      "name": "Vital Leech",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2543, 2663, 2872]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 9,
+      "name": "Fury Harvest",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Defense",
+              "formats": ["1f"],
+              "levels": [33.5, 35, 37.8]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 10,
+      "name": "Divine Roulette",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max Physical Attack",
+              "formats": ["1f"],
+              "levels": [66.9, 70.1, 75.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 11,
+      "name": "Evasive Charge",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Precision Rate",
+              "formats": ["1%"],
+              "levels": [0.069, 0.072, 0.078]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 12,
+      "name": "Light and Shadow Alike",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 13,
+      "name": "Heart of Fire",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2543, 2663, 2872]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 14,
+      "name": "Morale Chant",
+      "zhTW": "易水歌",
+      "translationStatus": "CANDIDATE",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [24.8, 49.6],
+                [25.9, 51.9],
+                [28, 56]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 15,
+      "name": "Seasonal Edge",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [24.8, 49.6],
+                [25.9, 51.9],
+                [28, 56]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 16,
+      "name": "Mountain's Might",
+      "zhTW": "千山法",
+      "translationStatus": "CANDIDATE",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Bellstrike Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [12.7, 25.3],
+                [13.3, 26.5],
+                [14.3, 28.5]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 17,
+      "name": "Wildfire Spark",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 18,
+      "name": "Battle Anthem",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Affinity Rate",
+              "formats": ["1%"],
+              "levels": [0.039, 0.04, 0.044]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 19,
+      "name": "Sword Morph",
+      "zhTW": "無名心法",
+      "translationStatus": "CANDIDATE",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 20,
+      "name": "Wolfchaser's Art",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Affinity Rate",
+              "formats": ["1%"],
+              "levels": [0.039, 0.04, 0.044]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 21,
+      "name": "Adaptive Steel",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max Bellstrike Attack",
+              "formats": ["1f"],
+              "levels": [38, 39.8, 42.9]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 22,
+      "name": "Insightful Strike",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 23,
+      "name": "Sword Horizon",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 24,
+      "name": "Gourd Toss",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Precision Rate",
+              "formats": ["1%"],
+              "levels": [0.069, 0.072, 0.078]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 25,
+      "name": "Thunderous Bloom",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 26,
+      "name": "Star Reacher",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 27,
+      "name": "Blossom Barrage",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.086, 0.09, 0.097]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 28,
+      "name": "Royal Remedy",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.086, 0.09, 0.097]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 29,
+      "name": "Restoring Blossom",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Silkbind Attack",
+              "formats": ["1f"],
+              "levels": [38, 39.8, 42.9]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 30,
+      "name": "Esoteric Revival",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.077, 0.081, 0.087]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 31,
+      "name": "Mending Loom",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 32,
+      "name": "Exquisite Scenery",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.086, 0.09, 0.097]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 33,
+      "name": "Trapped Beast",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2543, 2663, 2872]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 34,
+      "name": "Art of Resistance",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Stonesplit Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [12.7, 25.3],
+                [13.3, 26.5],
+                [14.3, 28.5]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 35,
+      "name": "Rock Solid",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Max HP",
+              "formats": ["0f"],
+              "levels": [2543, 2663, 2872]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 36,
+      "name": "Echoes of Oblivion",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.086, 0.09, 0.097]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 37,
+      "name": "Vendetta",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [66.9, 70.1, 75.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 38,
+      "name": "Breaking Point",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Precision Rate",
+              "formats": ["1%"],
+              "levels": [0.069, 0.072, 0.078]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 39,
+      "name": "Riptide Reflex",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Bamboocut Attack",
+              "formats": ["1f"],
+              "levels": [38, 39.8, 42.9]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 40,
+      "name": "Phantom Rally",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.086, 0.09, 0.097]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 41,
+      "name": "Towline Sweep",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [66.9, 70.1, 75.6]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 42,
+      "name": "Light Anew",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Bamboocut Attack",
+              "formats": ["1f"],
+              "levels": [38, 39.8, 42.9]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 43,
+      "name": "Song of Tang",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Precision Rate",
+              "formats": ["1%"],
+              "levels": [0.069, 0.072, 0.078]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 44,
+      "name": "Frost-Clad Night",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 45,
+      "name": "Steadfast Devotion",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.077, 0.081, 0.087]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 46,
+      "name": "Throat-Piercing Art",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Stonesplit Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [12.7, 25.3],
+                [13.3, 26.5],
+                [14.3, 28.5]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 47,
+      "name": "Wildfire Surge",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 48,
+      "name": "Soaring High",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 49,
+      "name": "Sky Gripped",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.077, 0.081, 0.087]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 50,
+      "name": "Empirical Edge",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 51,
+      "name": "Celestial Vigor",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Formless Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [14.1, 28.1],
+                [14.7, 29.5],
+                [15.9, 31.7]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 52,
+      "name": "Harmony Song",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 53,
+      "name": "Zephyr Whispers",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.077, 0.081, 0.087]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 54,
+      "name": "Ink and Strings",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 55,
+      "name": "Blade's Will",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Formless Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [14.1, 28.1],
+                [14.7, 29.5],
+                [15.9, 31.7]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 56,
+      "name": "Eonpour",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Min Physical Attack",
+              "formats": ["1f"],
+              "levels": [74.4, 77.9, 84]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 57,
+      "name": "Skyspeak",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Critical Rate",
+              "formats": ["1%"],
+              "levels": [0.077, 0.081, 0.087]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 58,
+      "name": "Mistwing",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Physical Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [22.3, 44.7],
+                [23.3, 46.7],
+                [25.2, 50.4]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 59,
+      "name": "Volutefit",
+      "zhTW": null,
+      "translationStatus": "UNKNOWN",
+      "tiers": [
+        {
+          "tier": 0,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 1,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 2,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [
+            {
+              "sourceEffectIndex": 0,
+              "startLevel": 16,
+              "stat": "Formless Attack",
+              "formats": ["1f", "1f"],
+              "levels": [
+                [14.1, 28.1],
+                [14.7, 29.5],
+                [15.9, 31.7]
+              ]
+            }
+          ],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 3,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 4,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 5,
+          "sourceEffectCount": 1,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        },
+        {
+          "tier": 6,
+          "sourceEffectCount": 2,
+          "soloLevelValues": [],
+          "effectDescriptions": "SEE_SOURCE"
+        }
+      ]
+    }
+  ],
+  "selectedConditionValues": [
+    {
+      "name": "易水歌",
+      "en": "Morale Chant",
+      "tier": 2,
+      "soloLevel": 18,
+      "stats": {
+        "minPhysicalAttack": 28,
+        "maxPhysicalAttack": 56
+      }
+    },
+    {
+      "name": "易水歌",
+      "en": "Morale Chant",
+      "tier": 5,
+      "stats": {
+        "directCriticalRatePercent": 4.6
+      }
+    },
+    {
+      "name": "無名心法",
+      "en": "Sword Morph",
+      "tier": 2,
+      "soloLevel": 18,
+      "stats": {
+        "maxPhysicalAttack": 84
+      }
+    },
+    {
+      "name": "無名心法",
+      "en": "Sword Morph",
+      "tier": 5,
+      "stats": {
+        "directAffinityRatePercent": 2.3
+      }
+    },
+    {
+      "name": "千山法",
+      "en": "Mountain's Might",
+      "tier": 2,
+      "soloLevel": 18,
+      "stats": {
+        "minBellstrikeAttack": 14.3,
+        "maxBellstrikeAttack": 28.5
+      }
+    },
+    {
+      "name": "千山法",
+      "en": "Mountain's Might",
+      "tier": 5,
+      "stats": {
+        "bellstrikePenetration": 6
+      }
+    }
+  ],
+  "communityStaticValues": {
+    "剑气纵横": {
+      "最大外功攻击": 84,
+      "直接会意率": 2.3
+    },
+    "千营一呼": {
+      "会心率": 9.7,
+      "外功伤害加成": 2.8
+    },
+    "君臣药": {
+      "会心率": 9.7,
+      "直接会心率": 4.6
+    },
+    "山河绝韵": {
+      "会心率": 9.7,
+      "会心伤害加成": 4.4
+    },
+    "忘川绝响": {
+      "会心率": 9.7,
+      "会心伤害加成": 4.4
+    },
+    "扶摇直上": {
+      "最小外功攻击": 84,
+      "直接会心率": 4.6
+    },
+    "无名心法": {
+      "最大外功攻击": 84,
+      "直接会意率": 2.3
+    },
+    "易水歌": {
+      "最小外功攻击": 28,
+      "最大外功攻击": 56,
+      "直接会心率": 4.6
+    },
+    "花上月令": {
+      "会心率": 9.7,
+      "会心伤害加成": 4.4
+    },
+    "霜天白夜": {
+      "最小外功攻击": 84,
+      "直接会心率": 4.6
+    },
+    "三穷致知": {
+      "最小外功攻击": 25.2,
+      "最大外功攻击": 50.4,
+      "外功伤害加成": 2.5
+    },
+    "凝神章": {
+      "最小鸣金攻击": 14.3,
+      "最大鸣金攻击": 28.5,
+      "属攻穿透": 6
+    },
+    "千丝蛊": {
+      "最小外功攻击": 25.2,
+      "最大外功攻击": 50.4
+    },
+    "千山法": {
+      "最小鸣金攻击": 14.3,
+      "最大鸣金攻击": 28.5,
+      "属攻穿透": 6
+    },
+    "大唐歌": {
+      "精准率": 7.8,
+      "会心伤害加成": 4
+    },
+    "威猛歌": {
+      "会意率": 4.4,
+      "会意伤害加成": 5.2
+    },
+    "孤忠不辞": {
+      "会心率": 8.7,
+      "会心伤害加成": 4
+    },
+    "征人归": {
+      "最小外功攻击": 75.6,
+      "外功穿透": 5.1
+    },
+    "心弥泥鱼": {
+      "最小破竹攻击": 42.9,
+      "属攻穿透": 6
+    },
+    "怒斩马": {},
+    "所恨年年": {
+      "精准率": 7.8,
+      "外功伤害加成": 2.5
+    },
+    "抗造大法": {
+      "最小裂石攻击": 14.3,
+      "最大裂石攻击": 28.5,
+      "属攻穿透": 6
+    },
+    "擒天势": {
+      "会心率": 8.7,
+      "会心伤害加成": 4
+    },
+    "断石之构": {
+      "精准率": 7.8,
+      "直接会心率": 4.1
+    },
+    "明晦同尘": {
+      "最小外功攻击": 25.2,
+      "最大外功攻击": 50.4,
+      "外功穿透": 5.1
+    },
+    "春雷篇": {
+      "最小外功攻击": 25.2,
+      "最大外功攻击": 50.4,
+      "外功伤害加成": 2.5
+    },
+    "杏花不见": {
+      "最小牵丝攻击": 42.9
+    },
+    "灯儿亮": {
+      "最小外功攻击": 75.6,
+      "外功穿透": 5.1
+    },
+    "移经易武": {
+      "最大鸣金攻击": 42.9,
+      "鸣金伤害加成": 3
+    },
+    "穿喉决": {
+      "最小裂石攻击": 14.3,
+      "最大裂石攻击": 28.5,
+      "属攻穿透": 6
+    },
+    "纵地摘星": {
+      "最小外功攻击": 25.2,
+      "最大外功攻击": 50.4,
+      "外功穿透": 5.1
+    },
+    "绳舟行木": {
+      "最小破竹攻击": 42.9,
+      "属攻穿透": 6
+    },
+    "逐狼心经": {
+      "会意率": 4.4,
+      "会意伤害加成": 5.2
+    },
+    "极乐泣血": {
+      "最大外功攻击": 67.2,
+      "会心伤害加成": 3.5
+    }
+  },
+  "notes": [
+    "60 names, tiers and solo-level numeric records are indexed. Detailed effect descriptions remain at source URL; not reproduced.",
+    "凝神章 mapping to international data remains unresolved."
+  ]
+}
