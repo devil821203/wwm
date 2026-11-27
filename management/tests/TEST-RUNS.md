@@ -482,3 +482,7 @@ Windows，Node.js 22.14.0、pnpm 10.6.5。pnpm --filter @wwm/game-data test：17
 ## 2026-11-27 機體快照接入
 
 Windows、Node.js 22.14.0、pnpm 10.6.5；pnpm test 通過（資料 176、數值 48、戰鬥 40、最佳化 9、Web 80）；pnpm typecheck、pnpm lint、pnpm build 通過；pnpm exec playwright test tests/e2e/characters.spec.ts 桌面／手機共 8 項通過，包含保存、重載及備份匯入。pnpm format:check 首次因 E2E 檔格式失敗，格式化後重跑通過。輸出見執行終端，未另存日誌；未執行其他 E2E。
+
+## 2026-11-27 外部與玩家截圖資料初版檢查
+
+Windows Node 22.14.0：以 node 檢查固定來源 items.json 可解析、135 筆及 15 張 PNG、三份報告非空：PASS；git hash-object 為 86775007600543f97289eca7645cc3edbbc334b0，符合來源 blob；Get-FileHash SHA-256 e0992f89acf7f21019ff4d08574dfe87e0bcd7d4eda9837f38a8f1e343ebb88f；git diff --check 通過。三圖人工複看，其餘沿用待核轉寫。來源大檔置系統暫存，不發布；本輪文件整理未執行應用測試，無額外日誌檔。
