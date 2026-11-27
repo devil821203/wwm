@@ -17,3 +17,7 @@
 ## 2026-11-27 外部分類候選整理（未發布）
 
 基於 b021a2cac8c1a723e0c2b5c06b8ca29197415010 單獨取得裝備／心法檔並記錄 SHA-256 及 Git blob；與社群計算器 commit 7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f 分別標識，整理至 data/staging/external-comparison-2026-11-27。來源版本 1.0.334.64785 為使用者指定，非來源自行證實；授權待核。這是候選整理，沒有可審核的完整版本差異與發布決策，U01–U10 未執行，未覆蓋或發布正式資料。
+
+## 2026-11-28 鳴金虹技能循環候選（未發布）
+
+從先前取得的 AruSeito 固定 commit 7fdf5fe9cc1f35352e5dec89ab07fe3aed202a2f 整理 55 秒循環及 35 筆技能，候選存於 data/staging/external-comparison-2026-11-27/splendor-rotation.json；39 動作引用完整。地區、遊戲 build 和資料權利仍待核，使用者指定版本分開記錄；逐動作時序缺失，不作正式資料發布。

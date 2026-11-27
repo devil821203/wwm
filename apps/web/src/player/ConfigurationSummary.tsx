@@ -2,6 +2,8 @@
 import type { Build, Character, PlayerArchive } from '@wwm/game-data';
 import baseline from '../../../../data/staging/external-comparison-2026-11-27/character.json';
 import { SimulationPanel } from '../simulation/SimulationWorkspace';
+import { mapRecordedConfiguration } from './recorded-mapping';
+import splendorRotation from '../../../../data/staging/external-comparison-2026-11-27/splendor-rotation.json';
 
 export function ConfigurationSummary({
   archive,
@@ -15,6 +17,7 @@ export function ConfigurationSummary({
   const release = archive.dataReleases.find(
     (entry) => entry.version.id === character.gameVersionId,
   );
+  const mapped = mapRecordedConfiguration(build);
   const unsupportedManual =
     (build.recordedPanel?.length ?? 0) > 0 ||
     (build.recordedInnerWays?.length ?? 0) > 0;
@@ -130,6 +133,61 @@ export function ConfigurationSummary({
           )}
         </dl>
         <p>來源：{baseline.sources[0].url}</p>
+      </details>
+      <details>
+        <summary>查看面板與心法映射</summary>
+        <p>
+          已辨識 {Object.keys(mapped.values).length}{' '}
+          項面板欄位；總值與實算值分開保存，未識別欄位保留原值。
+        </p>
+        <dl>
+          {Object.entries(mapped.values).map(([key, entry]) => (
+            <div key={key}>
+              <dt>
+                {entry.label} → {key}
+              </dt>
+              <dd>
+                {entry.value}
+                {entry.unit}（面板紀錄）
+              </dd>
+            </div>
+          ))}
+        </dl>
+        {mapped.unmapped.length > 0 && (
+          <p>未映射的欄位：{mapped.unmapped.join('、')}</p>
+        )}
+        {mapped.issues.length > 0 && (
+          <ul>
+            {mapped.issues.map((issue) => (
+              <li key={issue}>{issue}</li>
+            ))}
+          </ul>
+        )}
+        <ul>
+          {mapped.hearts.map((heart, index) => (
+            <li key={`${heart.name}-${index}`}>
+              {heart.name}：{heart.reason}
+              {heart.candidateStats && (
+                <details>
+                  <summary>查看來源參考數值（預估值）</summary>
+                  <pre>{JSON.stringify(heart.candidateStats, null, 2)}</pre>
+                </details>
+              )}
+            </li>
+          ))}
+        </ul>
+      </details>
+      <details>
+        <summary>查看鳴金·虹參考技能與循環</summary>
+        <p>
+          預估資料：{splendorRotation.durationSeconds} 秒、
+          {splendorRotation.rotation.length} 個參考循環項目、
+          {Object.keys(splendorRotation.skills).length}{' '}
+          個技能資料；來源未提供完整施放時序，尚不能送入事件模擬器。
+        </p>
+        <a href={splendorRotation.source.url} target="_blank" rel="noreferrer">
+          查看參考資料來源
+        </a>
       </details>
       <h3>期望 DPS</h3>
       {missing.length ? (
