@@ -502,3 +502,7 @@ Windows、Node 22.14.0：pnpm --filter @wwm/web exec vitest run src/App.test.tsx
 ## 2026-11-28 手動面板心法映射及循環候選
 
 Windows Node 22.14.0、pnpm 10.6.5：Web typecheck、受影響 ESLint、build 通過；pnpm --filter @wwm/web exec vitest run src/player/recorded-mapping.test.ts src/player/CharacterWorkspace.test.tsx 5 項通過（顯示修改後重跑通過）；node 檢查社群 55 秒、39 動作、35 技能、引用完整：PASS；pnpm exec playwright test tests/e2e/characters.spec.ts 桌面／手機 8 項通過（最後顯示文字變更前執行）。未驗證遊戲實際係數或事件時間；輸出於執行終端，無獨立日誌。
+
+## 2026-11-28 試算頁配置選擇
+
+Windows Node 22.14.0、pnpm 10.6.5：Web typecheck、受影響 ESLint、pnpm build 通過；pnpm --filter @wwm/web exec vitest run src/preview/SplendorPreview.test.tsx 1 項通過，確認切換兩個配置不沿用舊面板或固定 DPS；pnpm exec playwright test tests/e2e/splendor-preview.spec.ts 桌面／手機 2 項通過。未執行全專案測試或驗證真實遊戲 DPS；輸出在執行終端，無獨立日誌。
