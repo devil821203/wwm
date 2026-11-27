@@ -1,7 +1,7 @@
+﻿import { lazy, Suspense, useState } from 'react';
 const OptimizationWorkspace = lazy(
   () => import('./optimization/OptimizationWorkspace'),
 );
-import { lazy, Suspense, useState } from 'react';
 import CharacterWorkspace from './player/CharacterWorkspace';
 const MeasurementWorkspace = lazy(
   () => import('./measurement/MeasurementWorkspace'),

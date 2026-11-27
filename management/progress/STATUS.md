@@ -204,3 +204,11 @@ Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、
 ### 2026-11-28：配置摘要與既有模擬入口
 
 角色配置頁顯示已保存的裝備、心法和手動面板；可展開專案 character.json 的社群裸面板並標為預估與非當前屬性；版本資料完整且無未接入手動資料時可透過既有模擬器試算。手動面板／心法、缺版本與循環時明示無法計算。Web typecheck、受影響 ESLint、build 通過；角色單元 3 項與角色 E2E 桌面／手機 8 項通過。當前配置完整屬性自動合成及期望 DPS 仍因跨模組資料映射與來源係數阻塞，見 ISSUE-020；本需求未標 DONE。
+
+## 本機開發首頁白畫面修復（IN_PROGRESS，2026-11-28）
+
+開發伺服器 HTTP 200 但瀏覽器因 App.tsx 在 React lazy 匯入前使用 lazy 而拋錯；調整入口載入順序，驗證開發伺服器實際瀏覽器、角色頁及相關回歸。
+
+### 2026-11-28：本機首頁白畫面已修復
+
+App.tsx 將 React lazy 匯入移至首次使用之前，修正 Vite 開發模式 ReferenceError。實際 Chromium 連線 127.0.0.1:5173、首頁和角色頁顯示且無 pageerror；首頁 Vitest 2 項及受影響檔案 ESLint 通過。本次僅修復開發入口，ISSUE-020 與配置 DPS 缺口不變。

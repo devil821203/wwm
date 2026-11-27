@@ -494,3 +494,7 @@ Windows Node 22.14.0：node 解析四份 JSON，核對 135 件裝備、60 本心
 ## 2026-11-28 配置摘要及期望 DPS 入口
 
 Windows Node 22.14.0、pnpm 10.6.5：pnpm --filter @wwm/web typecheck、新增／修改三檔 ESLint、pnpm build 通過；pnpm --filter @wwm/web exec vitest run src/player/CharacterWorkspace.test.tsx 3 項通過，驗證保存面板、心法顯示與未知 DPS 阻擋；pnpm exec playwright test tests/e2e/characters.spec.ts 桌面／手機 8 項通過。未執行全專案測試，輸出於執行終端，未另存日誌；未驗證真實遊戲 DPS。
+
+## 2026-11-28 本機白畫面修復
+
+Windows、Node 22.14.0：pnpm --filter @wwm/web exec vitest run src/App.test.tsx 2 項通過；pnpm exec eslint apps/web/src/App.tsx 通過；Playwright Chromium 直接連開發伺服器首頁並切換角色頁成功，無 pageerror。修復前實測 Cannot access 'lazy' before initialization；結果輸出於執行終端，未另存日誌。
