@@ -23,3 +23,5 @@ export * from './rotation-schemas.js';
 export * from './equipment-generation.js';
 export * from './path-coverage.js';
 export * from './path-handlers.js';
+
+export * from './version-contracts.js';

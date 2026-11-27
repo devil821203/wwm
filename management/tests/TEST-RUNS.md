@@ -475,3 +475,6 @@ Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、
 配置頁新增裝備庫項目選擇、心法名稱及手動面板紀錄，支援總數值和實算值分開記錄；已知相同部位的裝備會替換，同時保留面板是否含裝備的設定。新增欄位納入配置保存、複製和 JSON 備份還原。這些手動記錄尚未對照版本資料，不直接用於傷害計算；未填入虛構數值。
 
 Windows、Node 22.14.0、pnpm 10.6.5：format:check、lint、typecheck、test、build、test:e2e 全通過；單元與整合 345 項（171／48／40／9／77），桌面與手機 E2E 48 項。角色 E2E 實際建立裝備及角色、記錄四心法與面板值、保存複製及匯出還原。日誌 management/tests/logs/character-loadout-2026-11-27-000940/。此前裝備生成、狀態互斥、自動帶值及傷害版本解析仍待完成。
+## 2026-11-27 資料來源／機體版本契約
+
+Windows，Node.js 22.14.0、pnpm 10.6.5。pnpm --filter @wwm/game-data test：176 通過（含新增 5 項）；pnpm --filter @wwm/game-data typecheck、pnpm --filter @wwm/game-data build：通過；pnpm exec eslint packages/game-data/src/version-contracts.ts packages/game-data/src/version-contracts.test.ts：首次未使用變數失敗，修正後通過，相關測試重跑通過。測試輸出於執行終端；未產生日誌檔。未執行 E2E 或全專案測試。
