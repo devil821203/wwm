@@ -490,3 +490,7 @@ Windows Node 22.14.0：以 node 檢查固定來源 items.json 可解析、135 �
 ## 2026-11-27 外部資料分類 JSON 驗證
 
 Windows Node 22.14.0：node 解析四份 JSON，核對 135 件裝備、60 本心法、22 筆武學索引、來源順序與代表值：PASS；逐條對照 135 件所有初始／調律詞條名稱、最大值、承音值：PASS。pnpm exec prettier --check data/staging/external-comparison-2026-11-27/*.json data/staging/external-comparison-2026-11-27/README.md 首次失敗，prettier --write 後重跑通過。未執行程式測試或資料發布 U01–U10；檢查輸出在執行終端，未另存日誌。
+
+## 2026-11-28 配置摘要及期望 DPS 入口
+
+Windows Node 22.14.0、pnpm 10.6.5：pnpm --filter @wwm/web typecheck、新增／修改三檔 ESLint、pnpm build 通過；pnpm --filter @wwm/web exec vitest run src/player/CharacterWorkspace.test.tsx 3 項通過，驗證保存面板、心法顯示與未知 DPS 阻擋；pnpm exec playwright test tests/e2e/characters.spec.ts 桌面／手機 8 項通過。未執行全專案測試，輸出於執行終端，未另存日誌；未驗證真實遊戲 DPS。

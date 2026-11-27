@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+﻿import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import CharacterWorkspace from './CharacterWorkspace';
@@ -42,6 +42,38 @@ describe('角色與配置畫面', () => {
       level: null,
     });
     expect(await screen.findByLabelText('配置名稱')).toHaveValue('預設配置');
+  });
+  it('shows saved panel and inner ways while blocking unsupported DPS', async () => {
+    const id = await playerRepository.createCharacter({
+      name: '面板角色',
+      pathId: 'bellstrike_splendor',
+      gameVersionId: null,
+      level: null,
+      realm: '',
+    });
+    const build = (await playerRepository.snapshot()).builds.find(
+      (item) => item.characterId === id,
+    )!;
+    await playerRepository.updateBuild({
+      ...build,
+      panelMode: 'EQUIPMENT_INCLUDED',
+      recordedInnerWays: ['易水歌'],
+      recordedPanel: [
+        { id: 'test-panel', label: '會心率（實算）', value: 25.8, unit: '%' },
+      ],
+    });
+    render(<CharacterWorkspace />);
+    const summary = await screen.findByRole('region', {
+      name: '目前配置屬性與期望DPS',
+    });
+    expect(summary).toHaveTextContent('易水歌');
+    expect(summary).toHaveTextContent('25.8%');
+    expect(summary).toHaveTextContent('無法計算');
+    expect(summary).toHaveTextContent('尚未對照版本資料');
+    expect(summary).toHaveTextContent('預估值');
+    expect(
+      screen.queryByRole('button', { name: '開始模擬' }),
+    ).not.toBeInTheDocument();
   });
   it('shows storage errors and keeps unsaved input instead of claiming success', async () => {
     const user = userEvent.setup();

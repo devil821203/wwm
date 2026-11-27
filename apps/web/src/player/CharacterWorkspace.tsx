@@ -11,6 +11,7 @@ import {
   type PlayerBackup,
 } from '@wwm/game-data';
 import { playerRepository } from './database';
+import { ConfigurationSummary } from './ConfigurationSummary';
 
 const messageFor = (error: unknown) => {
   if (error && typeof error === 'object' && 'issues' in error)
@@ -341,6 +342,13 @@ export default function CharacterWorkspace() {
                 </ul>
               )}
             </section>
+          )}
+          {selectedBuild && (
+            <ConfigurationSummary
+              archive={data}
+              build={selectedBuild}
+              character={selected}
+            />
           )}
           {selectedBuild ? (
             <BuildEditor
