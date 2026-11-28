@@ -510,3 +510,7 @@ Windows Node 22.14.0、pnpm 10.6.5：Web typecheck、受影響 ESLint、pnpm bui
 ## 2026-11-28 鳴金虹參考軸傷害
 
 Windows Node 22.14.0、pnpm 10.6.5：pnpm --filter @wwm/web exec vitest run src/player/splendor-reference.test.ts src/player/recorded-mapping.test.ts src/player/CharacterWorkspace.test.tsx src/preview/SplendorPreview.test.tsx 8 項通過；來源模型三組同輸入總傷害分別 3101002、3262453、3026856，新模型與其相符；修改後模型測試重跑 2 項通過。受影響 ESLint、Web typecheck、build 通過；pnpm exec playwright test tests/e2e/splendor-preview.spec.ts 桌面／手機 2 項通過。未跑全專案測試，輸出於執行終端；來源模型本身未經遊戲實測校準。
+
+## 2026-11-28 新截圖面板匯入檔
+
+Windows Node 22.14.0：使用 game-data dist 的 parsePlayerArchive 驗證 1 個角色、1 個配置、34 項面板，PASS。畫面依使用者提供兩張截圖轉寫，截斷欄位未填；未操作使用者瀏覽器、未測遊戲 DPS。

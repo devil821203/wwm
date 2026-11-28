@@ -1,0 +1,247 @@
+{
+  "format": "WWM_PLAYER_ARCHIVE",
+  "schemaVersion": "1.0.0",
+  "exportedAt": "2026-11-28T02:10:23.584Z",
+  "characters": [
+    {
+      "id": "4ee4759c-04e3-4bea-ba83-2640f140319c",
+      "name": "我的角色（新截圖面板）",
+      "pathId": "bellstrike_splendor",
+      "gameVersionId": null,
+      "level": null,
+      "realm": "使用者此前指定角色 100 級、單人世界等級 18；尚未連結資料版本",
+      "createdAt": "2026-11-28T02:10:23.584Z",
+      "updatedAt": "2026-11-28T02:10:23.584Z"
+    }
+  ],
+  "builds": [
+    {
+      "id": "05a2b1cc-5812-4ab3-a059-0959c130d5a8",
+      "characterId": "4ee4759c-04e3-4bea-ba83-2640f140319c",
+      "name": "2026-11-28 新截圖配置",
+      "panelMode": "UNKNOWN",
+      "stats": [],
+      "recordedPanel": [
+        {
+          "id": "a8d28cb5-55d2-4b2d-9e6f-30d6ba909f59",
+          "label": "御",
+          "value": 201,
+          "unit": ""
+        },
+        {
+          "id": "ea90a98f-4e8b-4180-9b94-07267f87bdc8",
+          "label": "敏",
+          "value": 201,
+          "unit": ""
+        },
+        {
+          "id": "ba0ee1c0-a0b2-411a-b5ed-fe36119c230c",
+          "label": "勢",
+          "value": 456,
+          "unit": ""
+        },
+        {
+          "id": "a3a4415d-49b7-47bd-81f6-434ad1f3cc0a",
+          "label": "氣血最大值",
+          "value": 180901,
+          "unit": ""
+        },
+        {
+          "id": "4e10561b-be14-47bb-892d-24fc8fa1d8f0",
+          "label": "氣血最大值（括號內）",
+          "value": 217081,
+          "unit": ""
+        },
+        {
+          "id": "6ea92d51-a5e8-4eac-8354-e908a78d81e2",
+          "label": "真氣最大值",
+          "value": 100,
+          "unit": ""
+        },
+        {
+          "id": "dd6f6029-fdfb-46fe-9130-d6126b0e2c60",
+          "label": "最小外功攻擊",
+          "value": 1218,
+          "unit": ""
+        },
+        {
+          "id": "9e77e664-6d18-4eef-a992-5ff785102d59",
+          "label": "最大外功攻擊",
+          "value": 3759,
+          "unit": ""
+        },
+        {
+          "id": "0d4bfefd-aae7-434c-92bd-b8125077bd09",
+          "label": "最小屬性攻擊總覽",
+          "value": 402,
+          "unit": ""
+        },
+        {
+          "id": "70576447-879c-4c57-ac1d-226adb97ff64",
+          "label": "最大屬性攻擊總覽",
+          "value": 999,
+          "unit": ""
+        },
+        {
+          "id": "923a801b-d1eb-4d90-9ec0-59aa072f053c",
+          "label": "外功防禦",
+          "value": 689,
+          "unit": ""
+        },
+        {
+          "id": "e9bb7dcf-ff2c-49ab-9468-4576d329beec",
+          "label": "最小鳴金攻擊",
+          "value": 375,
+          "unit": ""
+        },
+        {
+          "id": "ad4c7dbe-9ffe-4a29-8bc5-7b55d41ec06a",
+          "label": "最大鳴金攻擊",
+          "value": 925,
+          "unit": ""
+        },
+        {
+          "id": "ab1f3b7b-36c7-425c-ab9c-a978edcbd0ee",
+          "label": "最小裂石攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "de05bdc6-b843-4cee-a318-72f453a7d97c",
+          "label": "最大裂石攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "db2b1984-aa08-4ccc-8d1f-61f1ccd4a6df",
+          "label": "最小牽絲攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "4fee6325-cf24-44a1-a9c5-27a407401827",
+          "label": "最大牽絲攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "7614d6ca-129a-4d7d-82b8-c31c21d396c6",
+          "label": "最小破竹攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "2527e306-905c-40cc-9f1b-00e7bbb29e1c",
+          "label": "最大破竹攻擊",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "99c10267-7891-4210-8d3e-ed7df9271276",
+          "label": "最小無相攻擊",
+          "value": 26,
+          "unit": ""
+        },
+        {
+          "id": "025e4389-8f23-40dc-bf84-d5d866feef9e",
+          "label": "最大無相攻擊",
+          "value": 75,
+          "unit": ""
+        },
+        {
+          "id": "4e20b741-2bdd-4d12-8b49-d93923084af6",
+          "label": "精準率（總數值）",
+          "value": 119.7,
+          "unit": "%"
+        },
+        {
+          "id": "f12f93e8-b78e-4189-9086-6719c67c9ee9",
+          "label": "精準率（實算）",
+          "value": 94.6,
+          "unit": "%"
+        },
+        {
+          "id": "96c89597-8b17-479f-a3fc-5597d74433ca",
+          "label": "會心率（總數值）",
+          "value": 48.9,
+          "unit": "%"
+        },
+        {
+          "id": "92af278d-7557-4edd-bac2-2aeb029ccce4",
+          "label": "會心率（實算）",
+          "value": 26.4,
+          "unit": "%"
+        },
+        {
+          "id": "651c0970-cb1d-43d7-b160-e8e1355e6e8d",
+          "label": "外功穿透",
+          "value": 46.1,
+          "unit": ""
+        },
+        {
+          "id": "8da41d06-c2c1-4c01-85d7-8b73d7cebce2",
+          "label": "外功抗性",
+          "value": 0,
+          "unit": ""
+        },
+        {
+          "id": "4252796b-ab6e-4a1e-bd1b-22313fc3f160",
+          "label": "屬攻穿透",
+          "value": 29.6,
+          "unit": ""
+        },
+        {
+          "id": "c14e6af8-4181-4934-90f8-ab68910196a7",
+          "label": "全部武學增效",
+          "value": 6,
+          "unit": "%"
+        },
+        {
+          "id": "e871cd4c-562f-4577-b57e-3f2cf1d49256",
+          "label": "指定武學增效",
+          "value": 7,
+          "unit": "%"
+        },
+        {
+          "id": "d1e763b5-d280-4978-9778-9d43af830bb8",
+          "label": "指定技能增效",
+          "value": 22.6,
+          "unit": "%"
+        },
+        {
+          "id": "bea0a5d2-1cfd-45f0-9df7-040fcda9810b",
+          "label": "全部奇術增傷",
+          "value": 0,
+          "unit": "%"
+        },
+        {
+          "id": "ea5a6288-2fc2-4404-a217-a8236f084d19",
+          "label": "對首領單位增傷",
+          "value": 6,
+          "unit": "%"
+        },
+        {
+          "id": "a44dc74a-fdd3-41ff-bcef-1e524eb900af",
+          "label": "對玩家單位增效",
+          "value": 0,
+          "unit": "%"
+        }
+      ],
+      "recordedInnerWays": [],
+      "equipmentIds": [],
+      "martialArts": [],
+      "innerWays": [],
+      "mysticSkillIds": [],
+      "talentIds": [],
+      "notes": "使用者更新的兩張面板截圖；心法、裝備與未顯示欄位未沿用舊資料。氣血括號語意未知；會意率下緣截斷未記錄。",
+      "createdAt": "2026-11-28T02:10:23.584Z",
+      "updatedAt": "2026-11-28T02:10:23.584Z"
+    }
+  ],
+  "equipment": [],
+  "overrides": [],
+  "dataReleases": [],
+  "equipmentImages": [],
+  "equipmentHistory": [],
+  "measurements": []
+}
